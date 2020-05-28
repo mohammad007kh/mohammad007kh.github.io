@@ -16,6 +16,6 @@ A place to include any other types of information that you'd like to include abo
 
 You can contact me on linkedin
 
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="mohammad007kh"><a class="LI-simple-link" href='https://ir.linkedin.com/in/mohammad007kh?trk=profile-badge'>Mohammad Khoddami</a></div>
+<div align="center" class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="mohammad007kh"><a class="LI-simple-link" href='https://ir.linkedin.com/in/mohammad007kh?trk=profile-badge'>Mohammad Khoddami</a></div>
 
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
