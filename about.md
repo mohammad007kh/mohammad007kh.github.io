@@ -8,10 +8,6 @@ published: true
 Hi, I'm Mohammad and I'm really into Software Development
 I believe nothing is better than learning new things and getting new experiences 
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
 ### Contact me
 
 You can contact me on linkedin
