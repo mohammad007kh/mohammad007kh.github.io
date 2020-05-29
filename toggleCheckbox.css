@@ -34,6 +34,7 @@
 #theme-change input:checked + label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
+  background: #FFDD40;
 }
 
 #theme-change label:active:after {
