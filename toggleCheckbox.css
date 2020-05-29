@@ -65,7 +65,9 @@ body {
   width: 45px;
 }
 
-
+.site-name{
+ color=#fff;
+}
 
 html.transition,
 html.transition *,
