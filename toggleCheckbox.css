@@ -16,12 +16,12 @@
 }
 
 #theme-change label:after {
-  content: "";
+  content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 90px;
-  height: 90px;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
   background: #fff;
   border-radius: 90px;
   transition: 0.3s;
