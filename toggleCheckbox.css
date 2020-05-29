@@ -67,7 +67,9 @@ body {
 
 .site-name{
 	color=#fff;
-  	
+}
+nav a {
+	color=#fff;
 }
 
 html.transition,
