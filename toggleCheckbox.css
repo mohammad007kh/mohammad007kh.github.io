@@ -28,7 +28,7 @@
 }
 
 #theme-change input:checked + label {
-  background: #bada55;
+  background: var(--color-headings);
 }
 
 #theme-change input:checked + label:after {
