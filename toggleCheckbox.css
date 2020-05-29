@@ -65,7 +65,7 @@ body {
   width: 45px;
 }
 
-.site-name{
+.site-name a{
 	color=#fff;
 }
 nav a {
