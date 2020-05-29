@@ -68,3 +68,13 @@ body {
 #theme-change label:active:after {
   width: 45px;
 }
+
+
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
