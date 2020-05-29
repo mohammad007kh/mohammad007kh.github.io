@@ -5,8 +5,6 @@ permalink: /about/
 published: true
 ---
 
-### About me
-
 Hi, I'm Mohammad and I'm really into Software Development
 I believe nothing is better than learning new things and getting new experiences 
 
