@@ -5,13 +5,14 @@
 }
 
 #theme-change label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 200px;
-  height: 100px;
-  background: #F8F8F8;
-  display: block;
-  border-radius: 100px;
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
 }
 
 #theme-change label:after {
