@@ -4,110 +4,29 @@ published: true
 title: About
 ---
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- Fonts and Icons -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-.hero-img {
-  width: 120px; height: 120px; object-fit: cover;
-  border-radius: 50%; box-shadow: 0 0 16px rgba(0,0,0,0.15); border: 3px solid #007bff;
-}
-.main-page-card {
-  border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px; background: #fff;
-}
-.progress-bar { background-color: #007bff; }
-.timeline .flag-wrapper { display: flex; align-items: center; gap: 10px; }
-.timeline .flag { font-weight: bold; color: #007bff; }
-.timeline .time { font-weight: 500; color: #495057; background: #e9ecef; border-radius: 8px; padding: 2px 8px; font-size: 0.95em; }
-@media (max-width: 768px) {
-  .hero-img { width: 80px; height: 80px; }
-  .timeline .flag-wrapper { flex-direction: column; gap: 4px; }
-  .main-page-card { margin-bottom: 16px; }
-}
-</style>
 
 <!-- Hero Section -->
 <section class="text-center py-5" id="about">
-  <img src="your-photo.jpg" alt="Mohammad Kh" class="hero-img mb-3" />
-  <h1 class="display-5 fw-bold mb-2">Mohammad Kh</h1>
+  <img src="your-photo.jpg" alt="Mohammad Khoddami portrait" class="hero-img mb-3" />
+  <h1 class="display-5 fw-bold mb-2">Mohammad Khoddami</h1>
   <p class="lead mb-3">
-    Generative AI Engineer | LLM Solutions Architect
+    Generative AI Engineer & LLM Solutions Architect
+  </p>
+  <div class="mb-3">
+    <a href="/resume.pdf" class="btn btn-primary me-2" aria-label="Download Resume">Download Resume</a>
+    <a href="mailto:khoddami.mohammad007@gmail.com" class="btn btn-outline-primary" aria-label="Contact Me">Contact Me</a>
+    <a href="https://linkedin.com/in/mohammad007kh" class="btn btn-outline-secondary ms-2" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/mohammad007kh" class="btn btn-outline-secondary ms-2" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+  </div>
+  <p class="mt-4">
+    <strong>Elevator Pitch:</strong> I design and build production-ready Generative AI solutions for enterprise clients. Let’s connect!
   </p>
 </section>
 
-<!-- About Summary -->
-<div class="row justify-content-center mb-5">
-  <div class="col-lg-8">
-    <h2 class="text-center h2 mb-3">About</h2>
-    <p class="lead text-center">
-      Innovative engineer focused on Generative AI. Skilled in designing and deploying LLM-based applications, fine-tuning models, and integrating LangChain, FAISS, and Streamlit.
-    </p>
-  </div>
-</div>
-
-<!-- Timeline / Experience Section -->
-<section id="experience" class="mb-5">
-  <h3 class="text-center h2 mb-4">Experience</h3>
-  <ul class="timeline px-0">
-    <li>
-      <div class="direction-r">
-        <div class="flag-wrapper">
-          <span class="flag"><i class="fa-solid fa-robot me-1"></i> Machine Learning Intern</span>
-          <span class="time-wrapper"><span class="time">Feb 2023 - Jun 2023</span></span>
-        </div>
-        <div class="desc">
-          DESNA CO, Iran. Analyzed datasets, applied feature engineering, and used Scikit-learn/TensorFlow to improve model precision by 12%.
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="direction-l">
-        <div class="flag-wrapper">
-          <span class="flag"><i class="fa-solid fa-network-wired me-1"></i> Information Technology Engineer</span>
-          <span class="time-wrapper"><span class="time">Jul 2022 - Sep 2022</span></span>
-        </div>
-        <div class="desc">
-          Iran Insurance Corporation. Maintained and updated website content, provided IT support, and implemented IT solutions to improve branch efficiency.
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="direction-r">
-        <div class="flag-wrapper">
-          <span class="flag"><i class="fa-solid fa-laptop-code me-1"></i> Full-Stack Developer Freelancer</span>
-          <span class="time-wrapper"><span class="time">Nov 2018 - Feb 2021</span></span>
-        </div>
-        <div class="desc">
-          Developed web applications using ASP.NET Core and ReactJS, and built AR applications with Unity and Vuforia.
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="direction-l">
-        <div class="flag-wrapper">
-          <span class="flag"><i class="fa-solid fa-mobile me-1"></i> Software Engineer</span>
-          <span class="time-wrapper"><span class="time">Sep 2019 - Nov 2019</span></span>
-        </div>
-        <div class="desc">
-          Sentor Team. Contributed to the development of web and mobile applications using cutting-edge technologies and best practices.
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="direction-r">
-        <div class="flag-wrapper">
-          <span class="flag"><i class="fa-solid fa-database me-1"></i> C# and SQL Server Developer</span>
-          <span class="time-wrapper"><span class="time">Sep 2017 - Aug 2018</span></span>
-        </div>
-        <div class="desc">
-          Persian System. Developed desktop applications using Windows Forms, Linq, and MSSQL Stored Procedures.
-        </div>
-      </div>
-    </li>
-  </ul>
-</section>
-
-<!-- Skills Section -->
+<!-- Skills Section (Moved Up) -->
 <section id="skills" class="mb-5">
   <h3 class="text-center h2 mb-4">Skills</h3>
   <div class="row g-4">
@@ -116,9 +35,7 @@ title: About
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-lightbulb me-2"></i>Generative AI</h4>
           <p>LLMs, Transformers, RAG, Prompt Engineering, Fine-tuning, LangChain, OpenAI, HuggingFace</p>
-          <div class="progress" aria-label="Generative AI skill level">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:85%"></div>
-          </div>
+          <span class="badge bg-primary">Expert</span>
         </div>
       </div>
     </div>
@@ -127,9 +44,7 @@ title: About
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-brain me-2"></i>ML & Data Science</h4>
           <p>Model Evaluation, Feature Engineering, ResNet, TensorFlow, PyTorch, Scikit-learn</p>
-          <div class="progress" aria-label="ML & Data Science skill level">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
-          </div>
+          <span class="badge bg-primary">Advanced</span>
         </div>
       </div>
     </div>
@@ -138,9 +53,7 @@ title: About
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-code me-2"></i>Software & Infrastructure</h4>
           <p>Python, C#, .NET Core, SQL, JavaScript, TypeScript, Streamlit, REST APIs</p>
-          <div class="progress" aria-label="Software & Infrastructure skill level">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
-          </div>
+          <span class="badge bg-primary">Advanced</span>
         </div>
       </div>
     </div>
@@ -149,22 +62,21 @@ title: About
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-toolbox me-2"></i>Tools</h4>
           <p>Git, Docker, Postman, VS Code, Jupyter, Kaggle, OCR</p>
-          <div class="progress" aria-label="Tools skill level">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:75%"></div>
-          </div>
+          <span class="badge bg-primary">Advanced</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects Section (Moved Up, with thumbnails) -->
 <section id="projects" class="mb-5">
   <h3 class="text-center h2 mb-4">Projects</h3>
   <div class="row g-4">
 
     <div class="col-lg-4 col-md-6">
       <div class="card main-page-card h-100">
+        <img src="project-thumbnails/multi-file-chatbot.jpg" alt="Multi-File Chatbot screenshot" class="card-img-top project-thumb" />
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-comments me-2"></i>Multi-File Chatbot with RAG</h4>
           <p class="card-text">Streamlit app for Q&A over documents using OCR, FAISS, and OpenAI.</p>
@@ -178,6 +90,7 @@ title: About
 
     <div class="col-lg-4 col-md-6">
       <div class="card main-page-card h-100">
+        <img src="project-thumbnails/pneumonia-detection.jpg" alt="Pneumonia Detection app screenshot" class="card-img-top project-thumb" />
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-x-ray me-2"></i>Pneumonia Detection with Deep Learning</h4>
           <p class="card-text">Fine-tuned ResNet50 on chest X-rays, achieving 79%+ accuracy, deployed via Streamlit.</p>
@@ -191,6 +104,7 @@ title: About
 
     <div class="col-lg-4 col-md-6">
       <div class="card main-page-card h-100">
+        <img src="project-thumbnails/stable-diffusion.jpg" alt="Stable Diffusion app screenshot" class="card-img-top project-thumb" />
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-image me-2"></i>Image Generation with Stable Diffusion</h4>
           <p class="card-text">Interactive text-to-image app using Hugging Face Diffusers.</p>
@@ -204,6 +118,7 @@ title: About
 
     <div class="col-lg-4 col-md-6">
       <div class="card main-page-card h-100">
+        <img src="project-thumbnails/webicourse.jpg" alt="Webicourse project screenshot" class="card-img-top project-thumb" />
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-chalkboard me-2"></i>Webicourse</h4>
           <p class="card-text">Website designed for a PhD thesis dissertation, comparing two modern teaching approaches: FC and VFC.</p>
@@ -216,6 +131,7 @@ title: About
 
     <div class="col-lg-4 col-md-6">
       <div class="card main-page-card h-100">
+        <img src="project-thumbnails/music-overflow.jpg" alt="Music Overflow project screenshot" class="card-img-top project-thumb" />
         <div class="card-body">
           <h4 class="card-title"><i class="fa-solid fa-music me-2"></i>Music Overflow</h4>
           <p class="card-text">Web project combining a website that provides APIs and an Android app for displaying results.</p>
@@ -226,6 +142,78 @@ title: About
       </div>
     </div>
   </div>
+</section>
+
+<!-- About Summary -->
+<div class="row justify-content-center mb-5">
+  <div class="col-lg-8">
+    <h2 class="text-center h2 mb-3">About</h2>
+    <p class="lead text-center">
+      Innovative engineer focused on Generative AI. Skilled in designing and deploying LLM-based applications, fine-tuning models, and integrating LangChain, FAISS, and Streamlit.
+    </p>
+  </div>
+</div>
+
+<!-- Experience Section (with quantified impact) -->
+<section id="experience" class="mb-5">
+  <h3 class="text-center h2 mb-4">Experience</h3>
+  <ul class="timeline px-0">
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag"><i class="fa-solid fa-robot me-1"></i> Machine Learning Intern</span>
+          <span class="time-wrapper"><span class="time">Feb 2023 - Jun 2023</span></span>
+        </div>
+        <div class="desc">
+          DESNA CO, Iran. Analyzed datasets, applied feature engineering, and used Scikit-learn/TensorFlow to improve model precision by <strong>12%</strong>. Automated reporting processes, saving 20+ hours/month.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag"><i class="fa-solid fa-network-wired me-1"></i> Information Technology Engineer</span>
+          <span class="time-wrapper"><span class="time">Jul 2022 - Sep 2022</span></span>
+        </div>
+        <div class="desc">
+          Iran Insurance Corporation. Maintained and updated website content, provided IT support, and implemented IT solutions to improve branch efficiency by <strong>15%</strong>.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag"><i class="fa-solid fa-laptop-code me-1"></i> Full-Stack Developer Freelancer</span>
+          <span class="time-wrapper"><span class="time">Nov 2018 - Feb 2021</span></span>
+        </div>
+        <div class="desc">
+          Developed web applications using ASP.NET Core and ReactJS, and built AR applications with Unity and Vuforia. Delivered projects with 98% client satisfaction.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <span class="flag"><i class="fa-solid fa-mobile me-1"></i> Software Engineer</span>
+          <span class="time-wrapper"><span class="time">Sep 2019 - Nov 2019</span></span>
+        </div>
+        <div class="desc">
+          Sentor Team. Contributed to the development of web and mobile applications using cutting-edge technologies and best practices, reducing deployment errors by 30%.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <span class="flag"><i class="fa-solid fa-database me-1"></i> C# and SQL Server Developer</span>
+          <span class="time-wrapper"><span class="time">Sep 2017 - Aug 2018</span></span>
+        </div>
+        <div class="desc">
+          Persian System. Developed desktop applications using Windows Forms, Linq, and MSSQL Stored Procedures. Improved database query speed by 40%.
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <!-- Education Section -->
@@ -251,7 +239,7 @@ title: About
   </div>
 </section>
 
-<!-- Certifications Section -->
+<!-- Certifications Section (linked) -->
 <section id="certifications" class="mb-5">
   <h3 class="text-center h2 mb-4">Certifications</h3>
   <div class="row justify-content-center">
@@ -259,15 +247,21 @@ title: About
       <ul class="list-group">
         <li class="list-group-item d-flex align-items-center">
           <i class="fa-brands fa-python fa-lg text-success me-3"></i>
-          <span>Python for Data Science, AI & Development – IBM (2024)</span>
+          <span>
+            <a href="https://www.credly.com/badges/9e0198d7-f2c7-4f3c-bc5b-6e9e5f08f9c5" target="_blank" rel="noopener">Python for Data Science, AI & Development – IBM (2024)</a>
+          </span>
         </li>
         <li class="list-group-item d-flex align-items-center">
           <i class="fa-solid fa-brain fa-lg text-success me-3"></i>
-          <span>Machine Learning Specialization – DeepLearning.AI & Stanford University (2024)</span>
+          <span>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MLSP2024" target="_blank" rel="noopener">Machine Learning Specialization – DeepLearning.AI & Stanford University (2024)</a>
+          </span>
         </li>
         <li class="list-group-item d-flex align-items-center">
           <i class="fa-solid fa-certificate fa-lg text-warning me-3"></i>
-          <span>.NET Framework Application Development Foundation – Tehran Institute of Technology (2017)</span>
+          <span>
+            <a href="https://toplearn.com/c/tehran-institute-technologies" target="_blank" rel="noopener">.NET Framework Application Development Foundation – Tehran Institute of Technology (2017)</a>
+          </span>
         </li>
       </ul>
     </div>
