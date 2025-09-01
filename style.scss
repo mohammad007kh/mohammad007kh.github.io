@@ -119,6 +119,129 @@ body {
   opacity:0; transform: translateY(18px); transition: opacity 420ms ease, transform 420ms cubic-bezier(.2,.9,.3,1);
 }
 .reveal-on-scroll .revealed { opacity:1; transform:none; }
+/* ==== Section styling upgrades ==== */
+.section {
+  padding: 72px 0;
+  position: relative;
+}
+.section:nth-child(even) {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--panel) 100%);
+}
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.section-lead {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 42px;
+  color: var(--muted);
+}
+
+/* ==== Hero improvements ==== */
+.hero {
+  min-height: 80vh;
+  justify-content: space-between;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  max-width: 480px;
+}
+
+/* ==== Cards: lift & glow ==== */
+.skill-card,
+.edu-card,
+.timeline-content,
+.yt-channel {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.skill-card:hover,
+.edu-card:hover,
+.timeline-item:hover .timeline-content,
+.yt-channel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* ==== Skills progress ring polished ==== */
+.skill-ring {
+  position: relative;
+  font-size: 0.9rem;
+  background: conic-gradient(var(--accent) 0deg, rgba(0,0,0,0.08) 0deg);
+}
+.skill-ring::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: var(--panel);
+}
+
+/* ==== Timeline polished ==== */
+.timeline:before {
+  opacity: 0.3;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 28px;
+}
+.timeline-marker {
+  border: 3px solid var(--bg);
+  outline: 3px solid var(--accent);
+}
+.timeline-content {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* ==== Education polished ==== */
+.edu-card {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform var(--transition);
+}
+.edu-icon {
+  background: var(--accent-2);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* ==== YouTube polished ==== */
+.yt-channel {
+  box-shadow: 0 6px 24px rgba(255,59,48,0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.yt-channel:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(255,59,48,0.16);
+}
+.yt-thumb {
+  border: 3px solid var(--accent);
+}
+
+/* ==== Footer polished ==== */
+.site-footer {
+  background: linear-gradient(180deg, var(--panel), var(--bg));
+  padding: 32px 0;
+}
+.social .social-btn {
+  transition: transform var(--transition), background var(--transition);
+}
+.social .social-btn:hover {
+  transform: translateY(-4px);
+  background: var(--accent);
+  color: #fff;
+}
 
 /* Responsiveness */
 @media (max-width:900px) {
