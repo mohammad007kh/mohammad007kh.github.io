@@ -1,172 +1,196 @@
-<!doctype html>
-<html lang="en" data-theme="light">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.title | default: site.title | default: "CodeWithMamad — Resume" }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | default: 'Generative AI Engineer • LLM Solutions Architect • YouTube educator' }}" />
-  <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
-  <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <meta property="og:title" content="Mohammad Khoddami" />
+  <meta property="og:url" content="https://mohammad007kh.github.io" />
+  <meta property="og:site_name" content="Mohammad Khoddami"/>
+  <meta property="og:description" content="AI Engineer and LLM Architect. Portfolio, resume, and projects." />
+  <meta name="description" content="Mohammad Khoddami — Generative AI Engineer & LLM Architect. Portfolio, resume, projects, and case studies." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://avatars0.githubusercontent.com/u/42774761?s=460&u=74f7510520f0797d58e6b362ad566b89cef71023&v=4" />
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Bootstrap core (for layout utilities) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+
+  <!-- Theme color for mobile -->
+  <meta name="theme-color" content="#0b1220" id="meta-theme-color">
+
+  <!-- Any included meta or analytics -->
+  {% include meta.html %}
+  {% include analytics.html %}
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/images/avatar.png' | relative_url }}" alt="Mamad avatar" class="avatar" />
-        <div class="brand-text">
-          <h1 class="site-name">Mamad</h1>
-          <p class="site-role">Generative AI Engineer • LLM Solutions Architect</p>
+<body class="theme-dark">
+  <!-- Header -->
+  <div class="wrapper-masthead">
+    <div class="container">
+      <header class="masthead clearfix">
+        <a href="{{ site.baseurl }}/" class="site-avatar" aria-label="Home">
+          <img src="{{ site.avatar }}" alt="{{ site.name }} avatar" />
+        </a>
+
+        <div class="site-info">
+          <h1 class="site-name">
+            <a href="{{ site.baseurl }}/" aria-label="Home">{{ site.name }}</a>
+          </h1>
+          <p class="site-description">{{ site.description }}</p>
         </div>
-      </a>
 
-      <nav class="main-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#youtube">YouTube</a></li>
-        </ul>
-      </nav>
+        <nav class="mast-nav" role="navigation" aria-label="Main navigation">
+          <a href="{{ site.baseurl }}/about" {% if page.url == '/about' %}class="active"{% endif %}>About</a>
+          <a href="{{ site.baseurl }}/Blog-Posts/" {% if page.url contains 'Blog-Posts' %}class="active"{% endif %}>Blog</a>
+          <a href="{{ site.baseurl }}/#projects">Projects</a>
+          <a href="{{ site.baseurl }}/resume.pdf" aria-label="Resume" target="_blank">Resume</a>
+          <a href="mailto:khoddami.mohammad007@gmail.com" aria-label="Contact">Contact</a>
+        </nav>
 
-      <div class="header-actions">
-        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Toggle dark mode">
-          <span class="moon">🌙</span><span class="sun">☀️</span>
-        </button>
-      </div>
+        <!-- Theme toggle placed in header-right -->
+        <div class="header-actions" id="header-actions">
+          <div class="theme-toggle" id="theme-toggle" role="switch" aria-checked="true" tabindex="0" aria-label="Toggle dark / light theme">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+            <span class="tgl-knob" aria-hidden="true"></span>
+          </div>
+        </div>
+
+      </header>
     </div>
-  </header>
+  </div>
 
-  <main id="content" role="main">
+  <!-- Main Content -->
+  <div id="main" role="main" class="container">
     {{ content }}
-  </main>
+  </div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p>© {{ 'now' | date: '%Y' }} Mamad — CodeWithMamad</p>
-      </div>
-      <div class="footer-right social">
-        <a class="social-btn" href="https://github.com/mohammad007kh" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="social-btn youtube" href="https://www.youtube.com/@CodeWithMamad" aria-label="YouTube" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a class="social-btn" href="https://twitter.com/yourhandle" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
-      </div>
+  <!-- Footer -->
+  <div class="wrapper-footer">
+    <div class="container">
+      <footer class="footer">
+        <div class="mb-3 social-links">
+          <a href="https://github.com/mohammad007kh" class="me-2" aria-label="GitHub">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a href="https://linkedin.com/in/mohammad007kh" class="me-2" aria-label="LinkedIn">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a href="mailto:khoddami.mohammad007@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="footer-tagline mb-2">Built with ❤️ using Jekyll, Bootstrap, and a bit of AI</div>
+
+        <div class="mt-2 small text-muted"> &copy; {{ "now" | date: "%Y" }} Mohammad Khoddami. All rights reserved.</div>
+      </footer>
     </div>
-  </footer>
+  </div>
 
-  <noscript>
-    <style>
-      .reveal-on-scroll { opacity: 1; transform: none; }
-    </style>
-  </noscript>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    // main.js - theme toggle + scroll animations + skill progress
-(function () {
-  // Helpers
-  var doc = document.documentElement;
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var stored = localStorage.getItem('theme');
+  // THEME TOGGLE (persisting)
+  (function() {
+    const root = document.documentElement;
+    const body = document.body;
+    const toggle = document.getElementById('theme-toggle');
+    const metaTheme = document.getElementById('meta-theme-color');
 
-  function applyTheme(theme) {
-    doc.setAttribute('data-theme', theme);
-    var btn = document.getElementById('theme-toggle');
-    if (btn) btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-  }
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.remove('theme-light');
+        body.classList.add('theme-dark');
+        toggle.setAttribute('aria-checked', 'true');
+        metaTheme.setAttribute('content', '#0b1220');
+      } else {
+        body.classList.remove('theme-dark');
+        body.classList.add('theme-light');
+        toggle.setAttribute('aria-checked', 'false');
+        metaTheme.setAttribute('content', '#ffffff');
+      }
+      localStorage.setItem('site-theme', theme);
+    }
 
-  // Initialize theme
-  var initial = stored || (prefersDark ? 'dark' : 'light');
-  applyTheme(initial);
+    // init
+    const saved = localStorage.getItem('site-theme') || 'dark';
+    setTheme(saved);
 
-  // Toggle button
-  var tbtn = document.getElementById('theme-toggle');
-  if (tbtn) {
-    tbtn.addEventListener('click', function () {
-      var current = doc.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      var next = current === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
-      applyTheme(next);
-      // subtle bounce
-      tbtn.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-6px)' }, { transform: 'translateY(0)' }], { duration: 380, easing: 'cubic-bezier(.2,.9,.3,1)' });
-    });
-  }
+    function toggleTheme() {
+      const current = body.classList.contains('theme-dark') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+      // subtle animation
+      document.documentElement.style.transition = 'background-color 300ms ease-in-out, color 300ms ease-in-out';
+      window.setTimeout(() => document.documentElement.style.transition = '', 400);
+    }
 
-  // IntersectionObserver for reveal-on-scroll
-  var motionAllowed = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  if (motionAllowed && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          // Reveal children cards
-          var el = entry.target;
-          var children = el.querySelectorAll('.skill-card, .timeline-item, .edu-card, .yt-channel');
-          children.forEach(function (c, i) {
-            setTimeout(function () {
-              c.classList.add('revealed');
-              // trigger progress animation if skill-ring
-              var ring = c.querySelector('.skill-ring');
-              if (ring) animateSkillRing(ring);
-            }, i * 90);
-          });
-          io.unobserve(el);
+    toggle.addEventListener('click', toggleTheme);
+    toggle.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleTheme(); }});
+  })();
+
+  // Skill bars: on scroll animate width
+  (function() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    if (!skillCards.length) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) {
+          const bar = ent.target.querySelector('.skill-bar span');
+          const val = Number(ent.target.getAttribute('data-value')) || 80;
+          bar.style.width = val + '%';
+          ent.target.classList.add('active');
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.25 });
+    skillCards.forEach(c => io.observe(c));
+  })();
 
-    document.querySelectorAll('.reveal-on-scroll').forEach(function (el) { io.observe(el); });
-  } else {
-    // No motion: reveal immediately
-    document.querySelectorAll('.reveal-on-scroll .skill-card, .reveal-on-scroll .timeline-item, .reveal-on-scroll .edu-card, .reveal-on-scroll .yt-channel')
-      .forEach(function (c) { c.classList.add('revealed'); });
-  }
+  // Project filters
+  (function() {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
 
-  // Animate skill ring (simple numeric fill)
-  function animateSkillRing(el) {
-    if (!el || el.dataset._animated) return;
-    var target = parseInt(el.getAttribute('data-progress') || '80', 10);
-    var start = 0;
-    var duration = 900;
-    var startTime = null;
-    function step(ts) {
-      if (!startTime) startTime = ts;
-      var t = Math.min(1, (ts - startTime) / duration);
-      var current = Math.round(start + (target - start) * easeOutCubic(t));
-      el.textContent = current + '%';
-      el.style.background = `conic-gradient(var(--accent) ${current * 3.6}deg, rgba(0,0,0,0.04) ${current * 3.6}deg)`;
-      if (t < 1) requestAnimationFrame(step);
-      else el.dataset._animated = '1';
+    function setFilter(filter) {
+      buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-filter') === filter));
+      cards.forEach(card => {
+        const tags = (card.getAttribute('data-tags') || '').split(',');
+        if (filter === 'all' || tags.includes(filter)) {
+          card.style.display = 'block';
+          requestAnimationFrame(() => card.classList.add('visible'));
+        } else {
+          card.classList.remove('visible');
+          setTimeout(() => card.style.display = 'none', 220);
+        }
+      });
     }
-    requestAnimationFrame(step);
-  }
 
-  function easeOutCubic(x) { return 1 - Math.pow(1 - x, 3); }
-
-  // Attach small hover micro-interactions
-  document.addEventListener('mouseover', function (e) {
-    var card = e.target.closest('.skill-card, .yt-channel, .edu-card, .timeline-item');
-    if (card) {
-      card.style.transform = 'translateY(-6px)';
-      card.style.boxShadow = '0 14px 40px rgba(8,15,37,0.08)';
-    }
-  });
-  document.addEventListener('mouseout', function (e) {
-    var card = e.target.closest('.skill-card, .yt-channel, .edu-card, .timeline-item');
-    if (card) {
-      card.style.transform = '';
-      card.style.boxShadow = '';
-    }
-  });
-
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: motionAllowed ? 'smooth' : 'auto', block: 'start' });
-      }
+    buttons.forEach(b => {
+      b.addEventListener('click', () => setFilter(b.getAttribute('data-filter')));
+      b.addEventListener('keydown', (e) => { if (e.key === 'Enter') b.click(); });
     });
-  });
-})();
+
+    // init
+    setFilter('all');
+  })();
+
+  // Experience reveal
+  (function() {
+    const rows = document.querySelectorAll('.timeline-row');
+    if (!rows.length) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) ent.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    rows.forEach(r => io.observe(r));
+  })();
   </script>
+
 </body>
 </html>
