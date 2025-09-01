@@ -1,173 +1,245 @@
 ---
 layout: default
-title: "Home"
+published: true
+title: About
 ---
+<!-- Fonts and Icons (kept in layout for performance) -->
 
-<section class="hero container">
-  <div class="hero-left">
-    <h2 class="eyebrow">Hello — I'm</h2>
-    <h1 class="hero-title">Mamad</h1>
-    <p class="hero-sub">Generative AI Engineer · LLM Solutions Architect · YouTube programming educator</p>
-    <p class="hero-cta">
-      <a class="btn" href="#youtube">See my channel</a>
-      <a class="btn ghost" href="#skills">My skills</a>
-    </p>
-  </div>
-  <div class="hero-right">
-    <img src="{{ '/assets/images/hero-illustration.svg' | relative_url }}" alt="Illustration of code and AI" class="hero-illustration" />
+<!-- Hero Section -->
+<section class="hero text-center py-5" id="about">
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-2">Mohammad Khoddami</h1>
+    <p class="lead mb-3">Generative AI Engineer &amp; LLM Solutions Architect</p>
+
+    <div class="hero-ctas mb-3" role="group" aria-label="Primary actions">
+      <a href="/resume.pdf" class="btn btn-primary btn-cta" aria-label="Download Resume">Download Resume</a>
+      <a href="mailto:khoddami.mohammad007@gmail.com" class="btn btn-outline btn-cta" aria-label="Contact Me">Contact Me</a>
+      <a href="https://linkedin.com/in/mohammad007kh" class="icon-btn" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/mohammad007kh" class="icon-btn" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+    </div>
+
+    <p class="mt-4 hero-pitch"><strong>Elevator Pitch:</strong> I design and build production-ready Generative AI solutions for enterprise clients. Let’s connect!</p>
   </div>
 </section>
 
-<section id="skills" class="container section reveal-on-scroll">
-  <h2 class="section-title">Skills & Evidence</h2>
-  <p class="section-lead">Real projects and teaching evidence — not vague labels.</p>
+<!-- YouTube Showcase (replaces second About) -->
+<section id="youtube-showcase" class="mb-5 container">
+  <h3 class="text-center h2 mb-4">🎥 Latest on YouTube — AI, Coding & Beyond</h3>
+  <div class="yt-grid">
+    <!-- Replace the sample video IDs with your real ones -->
+    <article class="yt-card" tabindex="0">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" aria-label="Watch video 1">
+        <div class="yt-thumb">
+          <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="YouTube thumbnail 1">
+          <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+        </div>
+        <h4 class="yt-title">Building Fast RAG systems in production</h4>
+      </a>
+    </article>
 
+    <article class="yt-card" tabindex="0">
+      <a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ" target="_blank" rel="noopener" aria-label="Watch video 2">
+        <div class="yt-thumb">
+          <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="YouTube thumbnail 2">
+          <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+        </div>
+        <h4 class="yt-title">Prompt Engineering techniques that scale</h4>
+      </a>
+    </article>
+
+    <article class="yt-card" tabindex="0">
+      <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" rel="noopener" aria-label="Watch video 3">
+        <div class="yt-thumb">
+          <img src="https://img.youtube.com/vi/oHg5SJYRHA0/hqdefault.jpg" alt="YouTube thumbnail 3">
+          <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+        </div>
+        <h4 class="yt-title">From prototype to deployed generator</h4>
+      </a>
+    </article>
+  </div>
+  <div class="text-center mt-3">
+    <a class="btn btn-outline" href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank" rel="noopener" aria-label="Visit full YouTube channel">View full channel</a>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="mb-5 container">
+  <h3 class="text-center h2 mb-4">Skills</h3>
   <div class="skills-grid">
-    <!-- Skill card: uses progress ring + evidence -->
-    <article class="skill-card" data-skill="LLM Apps">
-      <div class="skill-top">
-        <div class="skill-ring" data-progress="90" aria-hidden="true"></div>
-        <div class="skill-meta">
-          <h3>LLM Applications</h3>
-          <p class="small">LangChain, LangGraph — production POCs & course series</p>
-        </div>
+    <div class="skill-card" data-value="95" aria-label="Generative AI skill level">
+      <div class="skill-meta">
+        <h4><i class="fa-solid fa-lightbulb me-2"></i>Generative AI</h4>
+        <p class="muted">LLMs, RAG, Prompt Engineering, LangChain, OpenAI, HuggingFace</p>
       </div>
-      <div class="skill-body">
-        <ul>
-          <li>Deployed 3 LLM prototypes with retrieval and agents</li>
-          <li>Created tutorial series showing step-by-step architecture</li>
-        </ul>
-        <div class="skill-tags">
-          <span class="tag">LangChain</span>
-          <span class="tag">Agents</span>
-          <span class="tag">Retrieval</span>
-        </div>
-      </div>
-    </article>
+      <div class="skill-bar" aria-hidden="true"><span></span></div>
+      <div class="skill-tooltip">Expert — Built multi-doc QA chatbot using OCR + FAISS</div>
+    </div>
 
-    <article class="skill-card" data-skill="ML">
-      <div class="skill-top">
-        <div class="skill-ring" data-progress="80" aria-hidden="true"></div>
-        <div class="skill-meta">
-          <h3>Machine Learning</h3>
-          <p class="small">C#, Python, Kotlin — hands-on teaching and demos</p>
-        </div>
+    <div class="skill-card" data-value="85" aria-label="ML and Data Science skill level">
+      <div class="skill-meta">
+        <h4><i class="fa-solid fa-brain me-2"></i>ML &amp; Data Science</h4>
+        <p class="muted">TensorFlow, PyTorch, ResNet, Model Eval</p>
       </div>
-      <div class="skill-body">
-        <ul>
-          <li>Hands-on notebooks and code examples for ML workflows</li>
-          <li>Tutorials on model evaluation and deployment</li>
-        </ul>
-        <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">C#</span>
-        </div>
-      </div>
-    </article>
+      <div class="skill-bar"><span></span></div>
+      <div class="skill-tooltip">Advanced — Fine-tuned ResNet50 for chest X-ray classification</div>
+    </div>
 
-    <article class="skill-card" data-skill="Android">
-      <div class="skill-top">
-        <div class="skill-ring" data-progress="75" aria-hidden="true"></div>
-        <div class="skill-meta">
-          <h3>Android (Kotlin)</h3>
-          <p class="small">OOP & SOLID, real app tutorials</p>
-        </div>
+    <div class="skill-card" data-value="88" aria-label="Software & Infrastructure skill level">
+      <div class="skill-meta">
+        <h4><i class="fa-solid fa-code me-2"></i>Software &amp; Infrastructure</h4>
+        <p class="muted">Python, .NET Core, SQL, JS/TS, Streamlit, REST</p>
       </div>
-      <div class="skill-body">
-        <ul>
-          <li>Multiple course projects demonstrating architecture & patterns</li>
-        </ul>
-        <div class="skill-tags">
-          <span class="tag">Kotlin</span>
-          <span class="tag">SOLID</span>
-        </div>
-      </div>
-    </article>
+      <div class="skill-bar"><span></span></div>
+      <div class="skill-tooltip">Advanced — Production microservices & CI/CD</div>
+    </div>
 
-    <article class="skill-card" data-skill="Web">
-      <div class="skill-top">
-        <div class="skill-ring" data-progress="85" aria-hidden="true"></div>
-        <div class="skill-meta">
-          <h3>Web (React, JS)</h3>
-          <p class="small">Interactive tutorials and code examples</p>
-        </div>
+    <div class="skill-card" data-value="83" aria-label="Tools skill level">
+      <div class="skill-meta">
+        <h4><i class="fa-solid fa-toolbox me-2"></i>Tools</h4>
+        <p class="muted">Git, Docker, VSCode, Jupyter, Kaggle</p>
       </div>
-      <div class="skill-body">
-        <ul>
-          <li>React tutorials with practical projects</li>
-        </ul>
-        <div class="skill-tags">
-          <span class="tag">React</span>
-          <span class="tag">JS</span>
-        </div>
-      </div>
-    </article>
+      <div class="skill-bar"><span></span></div>
+      <div class="skill-tooltip">Advanced — Containerized deployments</div>
+    </div>
   </div>
 </section>
 
-<section id="experience" class="container section reveal-on-scroll">
-  <h2 class="section-title">Experience</h2>
-  <p class="section-lead">Roles, impact, and highlights presented as an interactive timeline.</p>
+<!-- Projects Section -->
+<section id="projects" class="mb-5 container">
+  <h3 class="text-center h2 mb-4">Projects</h3>
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h3>Course Instructor — YouTube</h3>
-        <p class="meta">May 2019 — Present · 6 yrs 5 mos</p>
-        <ul>
-          <li>Create free programming tutorials on CodeWithMamad (Persian) and CodeWithMamadEN (English)</li>
-          <li>Topics: Generative AI, LangGraph, LangChain, ML (C#/Python/Kotlin), Android, React</li>
-        </ul>
-        <div class="metrics">
-          <div class="metric"><strong>6+</strong><span>Years teaching</span></div>
-          <div class="metric"><strong>100+</strong><span>Tutorials & projects</span></div>
+  <div class="project-controls text-center mb-3" role="tablist" aria-label="Project filters">
+    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+    <button class="filter-btn" data-filter="ai" role="tab">AI</button>
+    <button class="filter-btn" data-filter="web" role="tab">Web</button>
+    <button class="filter-btn" data-filter="mobile" role="tab">Mobile</button>
+  </div>
+
+  <div class="projects-grid">
+    <!-- Example project card: swap image src for real screenshots -->
+    <article class="project-card" data-tags="ai" tabindex="0">
+      <img class="project-thumb" src="/assets/screens/multifile-chatbot.png" alt="Multi-File Chatbot screenshot">
+      <div class="project-body">
+        <div class="project-header">
+          <h4><i class="fa-solid fa-comments me-2"></i>Multi-File Chatbot with RAG</h4>
+          <div class="project-badges">
+            <span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">FAISS</span>
+          </div>
         </div>
+        <p class="muted">Streamlit app for Q&A over documents using OCR, FAISS, and OpenAI.</p>
+        <div class="project-actions">
+          <a href="https://github.com/mohammad007kh/Multi-File-Ai-Chatbot" class="btn btn-sm" aria-label="View Multi-File Chatbot Project">View Project</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-tags="ai" tabindex="0">
+      <img class="project-thumb" src="/assets/screens/pneumonia-resnet.png" alt="Pneumonia Detection screenshot">
+      <div class="project-body">
+        <div class="project-header">
+          <h4><i class="fa-solid fa-x-ray me-2"></i>Pneumonia Detection with Deep Learning</h4>
+          <div class="project-badges"><span class="badge">TensorFlow</span><span class="badge">Streamlit</span></div>
+        </div>
+        <p class="muted">Fine-tuned ResNet50 on chest X-rays, deployed via Streamlit.</p>
+        <div class="project-actions">
+          <a href="https://github.com/mohammad007kh/Chest-X-ray-Pneumonia-Classifier-ResNet50-" class="btn btn-sm" aria-label="View Pneumonia Detection Project">View Project</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-tags="ai" tabindex="0">
+      <img class="project-thumb" src="/assets/screens/stable-diffusion.png" alt="Stable Diffusion screenshot">
+      <div class="project-body">
+        <div class="project-header">
+          <h4><i class="fa-solid fa-image me-2"></i>Image Generation with Stable Diffusion</h4>
+          <div class="project-badges"><span class="badge">Diffusers</span><span class="badge">Kaggle</span></div>
+        </div>
+        <p class="muted">Interactive text-to-image app using Hugging Face Diffusers.</p>
+        <div class="project-actions">
+          <a href="https://www.kaggle.com/code/mohammad007kh/stable-diffusion-text-to-image" class="btn btn-sm" aria-label="View Stable Diffusion Project">View Project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Add more projects similarly -->
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="mb-5 container">
+  <h3 class="text-center h2 mb-4">Experience</h3>
+
+  <div class="timeline-vertical" role="list">
+    <div class="timeline-row" role="listitem">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <div class="timeline-card">
+        <div class="exp-role">Machine Learning Intern — <span class="exp-company">DESNA CO, Iran</span></div>
+        <div class="exp-impact">
+          <ul>
+            <li>Improved model precision by <strong>12%</strong>.</li>
+            <li>Automated reporting, saving <strong>20+ hrs/month</strong>.</li>
+          </ul>
+        </div>
+        <div class="exp-date">Feb 2023 - Jun 2023</div>
       </div>
     </div>
 
-    <!-- Add more timeline items as needed -->
+    <div class="timeline-row" role="listitem">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <div class="timeline-card">
+        <div class="exp-role">IT Engineer — <span class="exp-company">Iran Insurance Corporation</span></div>
+        <div class="exp-impact">
+          <ul><li>Improved branch efficiency by <strong>15%</strong>.</li></ul>
+        </div>
+        <div class="exp-date">Jul 2022 - Sep 2022</div>
+      </div>
+    </div>
+
+    <!-- More timeline rows... -->
   </div>
 </section>
 
-<section id="education" class="container section reveal-on-scroll">
-  <h2 class="section-title">Education</h2>
+<!-- Education -->
+<section id="education" class="mb-5 container">
+  <h3 class="text-center h2 mb-4">Education</h3>
   <div class="education-grid">
-    <article class="edu-card">
+    <div class="edu-card">
       <div class="edu-icon">🎓</div>
       <div class="edu-body">
-        <h3>Computer Science & Self-directed Learning</h3>
-        <p class="small">Focused on practical systems, ML, and software engineering principles.</p>
-        <div class="edu-meta"><span class="badge">OOP & SOLID</span> <span class="badge">ML</span></div>
-      </div>
-    </article>
-    <!-- Add additional cards -->
-  </div>
-</section>
-
-<section id="youtube" class="container section reveal-on-scroll">
-  <h2 class="section-title">YouTube — CodeWithMamad / CodeWithMamadEN</h2>
-  <p class="section-lead">I create free programming tutorials focused on practical, hands-on coding and clear beginner-friendly explanations.</p>
-
-  <div class="youtube-row">
-    <div class="yt-channel">
-      <img class="yt-thumb" src="{{ '/assets/images/youtube-thumbnail-persian.png' | relative_url }}" alt="CodeWithMamad thumbnail" />
-      <div class="yt-body">
-        <h3>CodeWithMamad (Persian)</h3>
-        <p>Practical programming tutorials: Generative AI, ML with C#/Python/Kotlin, Android, React, Arduino simulations with Proteus.</p>
-        <p><strong>May 2019 — Present</strong></p>
-        <p><a class="btn" href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer">Visit channel</a></p>
+        <strong>Master of Science</strong> in Software Engineering
       </div>
     </div>
 
-    <div class="yt-channel">
-      <img class="yt-thumb" src="{{ '/assets/images/youtube-thumbnail-en.png' | relative_url }}" alt="CodeWithMamadEN thumbnail" />
-      <div class="yt-body">
-        <h3>CodeWithMamadEN (English)</h3>
-        <p>English tutorials covering LLM applications, LangChain, LangGraph, and beginner-friendly ML & Android content.</p>
-        <p><strong>May 2019 — Present</strong></p>
-        <p><a class="btn ghost" href="https://www.youtube.com/@CodeWithMamadEN" target="_blank" rel="noopener noreferrer">Visit channel</a></p>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <strong>Bachelor of Science</strong> in Software Engineering (2023)
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="mb-5 container">
+  <h3 class="text-center h2 mb-4">Certifications</h3>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-head"><i class="fa-brands fa-python fa-2x"></i><strong>Python for Data Science, AI &amp; Development</strong></div>
+      <div class="muted">IBM (2024)</div>
+      <a href="https://www.credly.com/badges/9e0198d7-f2c7-4f3c-bc5b-6e9e5f08f9c5" class="badge-link" target="_blank" rel="noopener">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-head"><i class="fa-solid fa-brain fa-2x"></i><strong>Machine Learning Specialization</strong></div>
+      <div class="muted">DeepLearning.AI &amp; Stanford University (2024)</div>
+      <a href="#" class="badge-link">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-head"><i class="fa-solid fa-certificate fa-2x"></i><strong>.NET Application Development Foundation</strong></div>
+      <div class="muted">Tehran Institute of Technology (2017)</div>
+      <a href="#" class="badge-link">View Certificate</a>
     </div>
   </div>
 </section>
