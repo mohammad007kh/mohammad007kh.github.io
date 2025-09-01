@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta property="og:title" content="Mohammad Khoddami" />
   <meta property="og:url" content="https://mohammad007kh.github.io" />
   <meta property="og:site_name" content="Mohammad Khoddami"/>
   <meta property="og:description" content="AI Engineer and LLM Architect. Portfolio, resume, and projects." />
+  <meta property="og:locale" content="en_US" />
   <meta name="description" content="Mohammad Khoddami — Generative AI Engineer & LLM Architect. Portfolio, resume, projects, and case studies." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" type="image/x-icon" href="https://avatars0.githubusercontent.com/u/42774761?s=460&u=74f7510520f0797d58e6b362ad566b89cef71023&v=4" />
   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
   <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Bootstrap core (for layout utilities) -->
+  <!-- Bootstrap core -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
   <!-- Main CSS -->
@@ -23,7 +27,6 @@
   <!-- Theme color for mobile -->
   <meta name="theme-color" content="#0b1220" id="meta-theme-color">
 
-  <!-- Any included meta or analytics -->
   {% include meta.html %}
   {% include analytics.html %}
 </head>
@@ -33,7 +36,7 @@
     <div class="container">
       <header class="masthead clearfix">
         <a href="{{ site.baseurl }}/" class="site-avatar" aria-label="Home">
-          <img src="{{ site.avatar }}" alt="{{ site.name }} avatar" />
+          <img src="{{ site.avatar }}" alt="{{ site.name }} avatar" loading="lazy" />
         </a>
 
         <div class="site-info">
@@ -51,7 +54,7 @@
           <a href="mailto:khoddami.mohammad007@gmail.com" aria-label="Contact">Contact</a>
         </nav>
 
-        <!-- Theme toggle placed in header-right -->
+        <!-- Theme toggle (rightmost) -->
         <div class="header-actions" id="header-actions">
           <div class="theme-toggle" id="theme-toggle" role="switch" aria-checked="true" tabindex="0" aria-label="Toggle dark / light theme">
             <i class="fa-solid fa-moon"></i>
@@ -59,15 +62,14 @@
             <span class="tgl-knob" aria-hidden="true"></span>
           </div>
         </div>
-
       </header>
     </div>
   </div>
 
   <!-- Main Content -->
-  <div id="main" role="main" class="container">
+  <main id="main" role="main" class="container">
     {{ content }}
-  </div>
+  </main>
 
   <!-- Footer -->
   <div class="wrapper-footer">
@@ -86,111 +88,97 @@
         </div>
 
         <div class="footer-tagline mb-2">Built with ❤️ using Jekyll, Bootstrap, and a bit of AI</div>
-
-        <div class="mt-2 small text-muted"> &copy; {{ "now" | date: "%Y" }} Mohammad Khoddami. All rights reserved.</div>
+        <div class="mt-2 small text-muted">&copy; {{ "now" | date: "%Y" }} Mohammad Khoddami. All rights reserved.</div>
       </footer>
     </div>
   </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
-  // THEME TOGGLE (persisting)
-  (function() {
-    const root = document.documentElement;
-    const body = document.body;
-    const toggle = document.getElementById('theme-toggle');
-    const metaTheme = document.getElementById('meta-theme-color');
+    // THEME TOGGLE
+    (function() {
+      const body = document.body;
+      const toggle = document.getElementById('theme-toggle');
+      const metaTheme = document.getElementById('meta-theme-color');
 
-    function setTheme(theme) {
-      if (theme === 'dark') {
-        body.classList.remove('theme-light');
-        body.classList.add('theme-dark');
-        toggle.setAttribute('aria-checked', 'true');
-        metaTheme.setAttribute('content', '#0b1220');
-      } else {
-        body.classList.remove('theme-dark');
-        body.classList.add('theme-light');
-        toggle.setAttribute('aria-checked', 'false');
-        metaTheme.setAttribute('content', '#ffffff');
+      function setTheme(theme){
+        if(theme==='dark'){
+          body.classList.remove('theme-light'); body.classList.add('theme-dark');
+          toggle.setAttribute('aria-checked','true'); metaTheme.setAttribute('content','#0b1220');
+        }else{
+          body.classList.remove('theme-dark'); body.classList.add('theme-light');
+          toggle.setAttribute('aria-checked','false'); metaTheme.setAttribute('content','#ffffff');
+        }
+        localStorage.setItem('site-theme',theme);
       }
-      localStorage.setItem('site-theme', theme);
-    }
 
-    // init
-    const saved = localStorage.getItem('site-theme') || 'dark';
-    setTheme(saved);
+      const saved = localStorage.getItem('site-theme') || 'dark';
+      setTheme(saved);
 
-    function toggleTheme() {
-      const current = body.classList.contains('theme-dark') ? 'dark' : 'light';
-      setTheme(current === 'dark' ? 'light' : 'dark');
-      // subtle animation
-      document.documentElement.style.transition = 'background-color 300ms ease-in-out, color 300ms ease-in-out';
-      window.setTimeout(() => document.documentElement.style.transition = '', 400);
-    }
+      function toggleTheme(){
+        const current = body.classList.contains('theme-dark') ? 'dark' : 'light';
+        setTheme(current==='dark' ? 'light' : 'dark');
+        document.documentElement.style.transition='background-color 300ms ease-in-out, color 300ms ease-in-out';
+        setTimeout(()=>document.documentElement.style.transition='',400);
+      }
 
-    toggle.addEventListener('click', toggleTheme);
-    toggle.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleTheme(); }});
-  })();
+      toggle.addEventListener('click',toggleTheme);
+      toggle.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleTheme();}});
+    })();
 
-  // Skill bars: on scroll animate width
-  (function() {
-    const skillCards = document.querySelectorAll('.skill-card');
-    if (!skillCards.length) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(ent => {
-        if (ent.isIntersecting) {
-          const bar = ent.target.querySelector('.skill-bar span');
-          const val = Number(ent.target.getAttribute('data-value')) || 80;
-          bar.style.width = val + '%';
-          ent.target.classList.add('active');
-        }
+    // Skill bars
+    (function(){
+      const skillCards=document.querySelectorAll('.skill-card');
+      if(!skillCards.length)return;
+      const io=new IntersectionObserver(entries=>{
+        entries.forEach(ent=>{
+          if(ent.isIntersecting){
+            const bar=ent.target.querySelector('.skill-bar span');
+            const val=Number(ent.target.getAttribute('data-value'))||80;
+            bar.style.width=val+'%'; ent.target.classList.add('active');
+          }
+        });
+      },{threshold:0.25});
+      skillCards.forEach(c=>io.observe(c));
+    })();
+
+    // Project filters
+    (function(){
+      const buttons=document.querySelectorAll('.filter-btn');
+      const cards=document.querySelectorAll('.project-card');
+
+      function setFilter(filter){
+        buttons.forEach(b=>b.classList.toggle('active',b.getAttribute('data-filter')===filter));
+        cards.forEach(card=>{
+          const tags=(card.getAttribute('data-tags')||'').split(',');
+          if(filter==='all'||tags.includes(filter)){
+            card.style.display='block';
+            requestAnimationFrame(()=>card.classList.add('visible'));
+          }else{
+            card.classList.remove('visible');
+            setTimeout(()=>card.style.display='none',220);
+          }
+        });
+      }
+
+      buttons.forEach(b=>{
+        b.addEventListener('click',()=>setFilter(b.getAttribute('data-filter')));
+        b.addEventListener('keydown',e=>{if(e.key==='Enter') b.click();});
       });
-    }, { threshold: 0.25 });
-    skillCards.forEach(c => io.observe(c));
-  })();
 
-  // Project filters
-  (function() {
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.project-card');
+      setFilter('all');
+    })();
 
-    function setFilter(filter) {
-      buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-filter') === filter));
-      cards.forEach(card => {
-        const tags = (card.getAttribute('data-tags') || '').split(',');
-        if (filter === 'all' || tags.includes(filter)) {
-          card.style.display = 'block';
-          requestAnimationFrame(() => card.classList.add('visible'));
-        } else {
-          card.classList.remove('visible');
-          setTimeout(() => card.style.display = 'none', 220);
-        }
-      });
-    }
-
-    buttons.forEach(b => {
-      b.addEventListener('click', () => setFilter(b.getAttribute('data-filter')));
-      b.addEventListener('keydown', (e) => { if (e.key === 'Enter') b.click(); });
-    });
-
-    // init
-    setFilter('all');
-  })();
-
-  // Experience reveal
-  (function() {
-    const rows = document.querySelectorAll('.timeline-row');
-    if (!rows.length) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(ent => {
-        if (ent.isIntersecting) ent.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    rows.forEach(r => io.observe(r));
-  })();
+    // Timeline reveal
+    (function(){
+      const rows=document.querySelectorAll('.timeline-row');
+      if(!rows.length)return;
+      const io=new IntersectionObserver(entries=>{
+        entries.forEach(ent=>{if(ent.isIntersecting) ent.target.classList.add('visible');});
+      },{threshold:0.2});
+      rows.forEach(r=>io.observe(r));
+    })();
   </script>
-
 </body>
 </html>
