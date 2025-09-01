@@ -293,3 +293,18 @@ title: About
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const expCards = document.querySelectorAll('.exp-card');
+  const observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  expCards.forEach(card => observer.observe(card));
+});
+</script>
