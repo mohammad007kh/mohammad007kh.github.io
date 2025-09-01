@@ -4,12 +4,11 @@
     <meta property="og:title" content="Mohammad Khoddami" />
     <meta property="og:url" content="https://mohammad007kh.github.io" />
     <meta property="og:site_name" content="Mohammad Khoddami"/>
-    <meta property="og:description" content="Mohammad Khoddami's personal blog." />
+    <meta property="og:description" content="AI Engineer and LLM Architect. Portfolio, resume, and projects." />
     <meta property="og:image" content="https://avatars0.githubusercontent.com/u/42774761?s=460&u=74f7510520f0797d58e6b362ad566b89cef71023&v=4" />
     <meta property="og:image:secure_url" content="https://avatars0.githubusercontent.com/u/42774761?s=460&u=74f7510520f0797d58e6b362ad566b89cef71023&v=4" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
-
     <meta name="googlebot" content="index,follow">
     <meta name="robots" content="noodp,noydir">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -129,18 +128,21 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar">
+          <a href="{{ site.baseurl }}/" class="site-avatar" aria-label="Home">
             <img src="{{ site.avatar }}" alt="{{ site.name }} avatar" />
           </a>
           <div class="site-info">
             <h1 class="site-name">
-              <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+              <a href="{{ site.baseurl }}/" aria-label="Home">{{ site.name }}</a>
             </h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
           <nav>
-            <a href="{{ site.baseurl }}/Blog-Posts/" {% if page.url contains 'Blog-Posts' %}class="active"{% endif %}>Blog</a>
             <a href="{{ site.baseurl }}/about" {% if page.url == '/about' %}class="active"{% endif %}>About</a>
+            <a href="{{ site.baseurl }}/Blog-Posts/" {% if page.url contains 'Blog-Posts' %}class="active"{% endif %}>Blog</a>
+            <a href="{{ site.baseurl }}/#projects" {% if page.url contains '#projects' %}class="active"{% endif %}>Projects</a>
+            <a href="{{ site.baseurl }}/resume.pdf" aria-label="Resume" target="_blank">Resume</a>
+            <a href="mailto:khoddami.mohammad007@gmail.com" aria-label="Contact">Contact</a>
           </nav>
         </header>
       </div>
@@ -156,7 +158,6 @@
       <div class="container">
         <footer class="footer">
           <div class="mb-3">
-            <!-- Social icons (if you want to add more, add here) -->
             <a href="https://github.com/mohammad007kh" class="me-2" aria-label="GitHub">
               <i class="fab fa-github fa-lg"></i>
             </a>
