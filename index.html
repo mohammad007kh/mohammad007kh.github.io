@@ -1,112 +1,54 @@
 ---
 layout: default
 published: true
+title: About
 ---
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/timeline.css" />
 
 <style>
-  /* Custom style for hero image */
-  .hero-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 16px rgba(0,0,0,0.15);
-    border: 3px solid #007bff;
-  }
-  .main-page-card {
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    margin-bottom: 24px;
-    background: #fff;
-  }
-  .progress-bar {
-    background-color: #007bff;
-  }
-  .timeline .flag-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .timeline .flag {
-    font-weight: bold;
-    color: #007bff;
-  }
-  .timeline .time {
-    font-weight: 500;
-    color: #495057;
-    background: #e9ecef;
-    border-radius: 8px;
-    padding: 2px 8px;
-    font-size: 0.95em;
-  }
-  .navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  @media (max-width: 768px) {
-    .hero-img { width: 80px; height: 80px; }
-    .timeline .flag-wrapper { flex-direction: column; gap: 4px; }
-    .main-page-card { margin-bottom: 16px; }
-    .navbar-nav { flex-direction: column; }
-  }
+.hero-img {
+  width: 120px; height: 120px; object-fit: cover;
+  border-radius: 50%; box-shadow: 0 0 16px rgba(0,0,0,0.15); border: 3px solid #007bff;
+}
+.main-page-card {
+  border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px; background: #fff;
+}
+.progress-bar { background-color: #007bff; }
+.timeline .flag-wrapper { display: flex; align-items: center; gap: 10px; }
+.timeline .flag { font-weight: bold; color: #007bff; }
+.timeline .time { font-weight: 500; color: #495057; background: #e9ecef; border-radius: 8px; padding: 2px 8px; font-size: 0.95em; }
+@media (max-width: 768px) {
+  .hero-img { width: 80px; height: 80px; }
+  .timeline .flag-wrapper { flex-direction: column; gap: 4px; }
+  .main-page-card { margin-bottom: 16px; }
+}
 </style>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Mohammad Kh</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <!-- Hero Section -->
-<header class="hero text-center py-5 bg-light" id="about">
+<section class="text-center py-5" id="about">
   <img src="your-photo.jpg" alt="Mohammad Kh" class="hero-img mb-3" />
   <h1 class="display-5 fw-bold mb-2">Mohammad Kh</h1>
   <p class="lead mb-3">
     Generative AI Engineer | LLM Solutions Architect
   </p>
-  <div class="mb-3">
-    <a href="https://github.com/mohammad007kh" class="me-2" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
-    <a href="https://linkedin.com/in/yourprofile" class="me-2" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-    <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
-  </div>
-  <a href="your-cv.pdf" class="btn btn-primary">Download CV</a>
-</header>
+</section>
 
-<!-- Page Summary -->
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <h2 class="text-center h2 mb-3">About</h2>
-      <p class="lead text-center">
-        Innovative engineer focused on Generative AI. Skilled in designing and deploying LLM-based applications, fine-tuning models, and integrating LangChain, FAISS, and Streamlit.
-      </p>
-    </div>
+<!-- About Summary -->
+<div class="row justify-content-center mb-5">
+  <div class="col-lg-8">
+    <h2 class="text-center h2 mb-3">About</h2>
+    <p class="lead text-center">
+      Innovative engineer focused on Generative AI. Skilled in designing and deploying LLM-based applications, fine-tuning models, and integrating LangChain, FAISS, and Streamlit.
+    </p>
   </div>
 </div>
 
 <!-- Timeline / Experience Section -->
-<div class="container my-5" id="experience">
+<section id="experience" class="mb-5">
   <h3 class="text-center h2 mb-4">Experience</h3>
-  <ul class="timeline">
-    <!-- Item 1 -->
+  <ul class="timeline px-0">
     <li>
       <div class="direction-r">
         <div class="flag-wrapper">
@@ -118,7 +60,6 @@ published: true
         </div>
       </div>
     </li>
-    <!-- Item 2 -->
     <li>
       <div class="direction-l">
         <div class="flag-wrapper">
@@ -130,7 +71,6 @@ published: true
         </div>
       </div>
     </li>
-    <!-- Item 3 -->
     <li>
       <div class="direction-r">
         <div class="flag-wrapper">
@@ -142,7 +82,6 @@ published: true
         </div>
       </div>
     </li>
-    <!-- Item 4 -->
     <li>
       <div class="direction-l">
         <div class="flag-wrapper">
@@ -154,7 +93,6 @@ published: true
         </div>
       </div>
     </li>
-    <!-- Item 5 -->
     <li>
       <div class="direction-r">
         <div class="flag-wrapper">
@@ -167,10 +105,10 @@ published: true
       </div>
     </li>
   </ul>
-</div>
+</section>
 
 <!-- Skills Section -->
-<div class="container my-5" id="skills">
+<section id="skills" class="mb-5">
   <h3 class="text-center h2 mb-4">Skills</h3>
   <div class="row g-4">
     <div class="col-md-6">
@@ -218,10 +156,10 @@ published: true
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Projects Section -->
-<div class="container my-5" id="projects">
+<section id="projects" class="mb-5">
   <h3 class="text-center h2 mb-4">Projects</h3>
   <div class="row g-4">
 
@@ -288,10 +226,10 @@ published: true
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Education Section -->
-<div class="container my-5" id="education">
+<section id="education" class="mb-5">
   <h3 class="text-center h2 mb-4">Education</h3>
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -311,10 +249,10 @@ published: true
       </ul>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Certifications Section -->
-<div class="container my-5" id="certifications">
+<section id="certifications" class="mb-5">
   <h3 class="text-center h2 mb-4">Certifications</h3>
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -334,21 +272,4 @@ published: true
       </ul>
     </div>
   </div>
-</div>
-
-<!-- Contact Section -->
-<footer class="container-fluid bg-light py-4 mt-5" id="contact">
-  <div class="container text-center">
-    <h5 class="mb-3">Contact</h5>
-    <p>
-      <a href="mailto:your@email.com"><i class="fas fa-envelope me-2"></i>your@email.com</a>
-      <span class="mx-2">|</span>
-      <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
-      <span class="mx-2">|</span>
-      <a href="https://github.com/mohammad007kh"><i class="fab fa-github me-2"></i>GitHub</a>
-    </p>
-    <p class="text-muted small">&copy; 2025 Mohammad Kh. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</section>
