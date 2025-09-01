@@ -356,9 +356,653 @@ footer {
   .exp-card.exp-right { transform: translateY(60px); }
   .exp-card.visible { transform: translateY(0); }
 }
+
+// Enhanced Skills Section Styles
+.skills-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.skill-card {
+  perspective: 1000px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.skill-card.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card-inner {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+}
+
+.skill-card:hover .skill-card-inner {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 123, 255, 0.15);
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.skill-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.skill-evidence {
+  margin-bottom: 1.5rem;
+}
+
+.evidence-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.evidence-item i {
+  color: #48bb78;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.skill-progress {
+  position: relative;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #48bb78, #38a169);
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+// YouTube Showcase Section
+.youtube-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  border-radius: 20px;
+  margin: 2rem 0;
+  color: white;
+}
+
+.youtube-section h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.youtube-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.youtube-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  color: #333;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.channel-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+
+.channel-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.channel-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.channel-description {
+  color: #4a5568;
+  margin: 0;
+}
+
+.subscribe-btn {
+  background: #ff0000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.subscribe-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  animation: gentleShake 0.5s ease-in-out;
+}
+
+.content-highlights {
+  margin-bottom: 2rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 123, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #007bff;
+}
+
+.highlight-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.highlight-content h5 {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #2d3748;
+}
+
+.highlight-content p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+// Education Section Enhanced
+.education-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  margin: 2rem 0;
+  color: white;
+}
+
+.education-section h3 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.education-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.education-icon.masters {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.education-icon.bachelors {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+}
+
+.degree-level {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.field-of-study {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.status-badge.current {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+}
+
+.status-badge.completed {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+}
+
+.focus-areas, .achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.focus-tag {
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.education-decoration {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0.1;
+}
+
+.decoration-dots::before {
+  content: '...';
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.education-quote {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+.education-quote i {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0.5rem;
+}
+
+// Button Animations
+.btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  animation: gentleShake 0.5s ease-in-out;
+}
+
+@keyframes gentleShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+// Scroll-triggered animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Enhanced Footer
+.wrapper-footer {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: white;
+  border: none;
+  padding: 2rem 0;
+}
+
+.footer h5 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.social-btn:hover::before {
+  left: 100%;
+}
+
+.social-btn i {
+  font-size: 1.3rem;
+}
+
+.github-btn {
+  background: linear-gradient(135deg, #24292e, #1a1e22);
+  color: white;
+}
+
+.github-btn:hover {
+  background: linear-gradient(135deg, #333, #24292e);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(36, 41, 46, 0.4);
+}
+
+.linkedin-btn {
+  background: linear-gradient(135deg, #0077b5, #005885);
+  color: white;
+}
+
+.linkedin-btn:hover {
+  background: linear-gradient(135deg, #0086c7, #0077b5);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+.email-btn {
+  background: linear-gradient(135deg, #ea4335, #d33b2c);
+  color: white;
+}
+
+.email-btn:hover {
+  background: linear-gradient(135deg, #f14336, #ea4335);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(234, 67, 53, 0.4);
+}
+
+.youtube-btn {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: white;
+}
+
+.youtube-btn:hover {
+  background: linear-gradient(135deg, #ff1a1a, #ff0000);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .text-white-50 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer .small {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-btn {
+    width: 200px;
+    justify-content: center;
+  }
+}
+
+// Responsive Design Enhancements
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .skill-card-inner {
+    padding: 1.5rem;
+  }
+  
+  .youtube-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .youtube-section, .education-section {
+    padding: 2rem 0;
+    margin: 1rem 0;
+  }
+  
+  .youtube-card, .education-card {
+    padding: 1.5rem;
+  }
+  
+  .stats-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 // Accessibility
 [aria-label] {
   outline: none;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Focus states
+.skill-card:focus,
+.education-card:focus,
+.youtube-card:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 4px;
+}
+
+// Ripple effect
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.3);
+  pointer-events: none;
+  animation: ripple-animation 1s ease-out;
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+// Card hover enhancements
+.skill-card,
+.education-card,
+.youtube-card {
+  position: relative;
+  overflow: hidden;
 }
 
 

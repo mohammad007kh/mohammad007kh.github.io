@@ -157,24 +157,35 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          <div class="mb-3">
-            <a href="https://github.com/mohammad007kh" class="me-2" aria-label="GitHub">
-              <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a href="https://linkedin.com/in/mohammad007kh" class="me-2" aria-label="LinkedIn">
-              <i class="fab fa-linkedin fa-lg"></i>
-            </a>
-            <a href="mailto:khoddami.mohammad007@gmail.com" aria-label="Email">
-              <i class="fas fa-envelope fa-lg"></i>
-            </a>
+          <div class="mb-4">
+            <h5 class="text-white mb-3">Let's Connect!</h5>
+            <div class="social-buttons">
+              <a href="https://github.com/mohammad007kh" class="social-btn github-btn" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/mohammad007kh" class="social-btn linkedin-btn" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="mailto:khoddami.mohammad007@gmail.com" class="social-btn email-btn" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </a>
+              <a href="https://youtube.com/@CodeWithMamad" class="social-btn youtube-btn" aria-label="YouTube" target="_blank">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+              </a>
+            </div>
           </div>
-          <div id="theme-change" class="mb-2">
+          <div id="theme-change" class="mb-3">
             <input type="checkbox" id="switch" name="theme" />
             <label for="switch">Toggle Theme</label>
           </div>
           {% include svg-icons.html %}
-          <div class="mt-2 small text-muted">
-            &copy; {{ "now" | date: "%Y" }} Mohammad Khoddami. All rights reserved.
+          <div class="mt-3 text-white-50">
+            <p class="mb-1">&copy; {{ "now" | date: "%Y" }} Mohammad Khoddami. All rights reserved.</p>
+            <p class="small">Crafted with <i class="fas fa-heart text-danger"></i> and lots of <i class="fas fa-coffee text-warning"></i></p>
           </div>
         </footer>
       </div>
