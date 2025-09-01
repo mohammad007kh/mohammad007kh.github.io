@@ -227,8 +227,58 @@ footer {
   margin-right: 0.4em;
   margin-bottom: 0.2em;
 }
+.timeline-vertical {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 32px;
+}
+.timeline-vertical:before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #e9ecef;
+  border-radius: 2px;
+}
+.timeline-row {
+  position: relative;
+  margin-bottom: 40px;
+  min-height: 80px;
+}
+.timeline-dot {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px #ccc;
+}
+.timeline-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-left: 40px;
+  padding: 1rem 1.3rem;
+  transition: box-shadow 0.2s;
+}
+.timeline-card:hover {
+  box-shadow: 0 6px 24px rgba(0,123,255,0.15);
+}
+@media (max-width: 600px) {
+  .timeline-vertical { padding-left: 0; }
+  .timeline-card { margin-left: 0; }
+  .timeline-dot,
+  .timeline-vertical:before { display: none; }
+}
 
 // Accessibility
 [aria-label] {
   outline: none;
 }
+
+
