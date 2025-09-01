@@ -25,43 +25,105 @@ title: About
   </p>
 </section>
 
-<!-- Skills Section (Moved Up) -->
+<!-- Enhanced Skills Section with Scroll Animation -->
 <section id="skills" class="mb-5">
-  <h3 class="text-center h2 mb-4">Skills</h3>
-  <div class="row g-4">
-    <div class="col-md-6">
-      <div class="card main-page-card h-100">
-        <div class="card-body">
-          <h4 class="card-title"><i class="fa-solid fa-lightbulb me-2"></i>Generative AI</h4>
-          <p>LLMs, Transformers, RAG, Prompt Engineering, Fine-tuning, LangChain, OpenAI, HuggingFace</p>
-          <span class="badge bg-primary">Expert</span>
+  <h3 class="text-center h2 mb-4">Skills & Expertise</h3>
+  <div class="skills-container">
+    <div class="row g-4" id="skillsGrid">
+      <div class="col-md-6">
+        <div class="card skill-card main-page-card h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="fa-solid fa-lightbulb me-2"></i>Generative AI</h4>
+            <p class="mb-3">LLMs, Transformers, RAG, Prompt Engineering, Fine-tuning, LangChain, OpenAI, HuggingFace</p>
+            <div class="skill-evidence">
+              <div class="evidence-item">
+                <i class="fa-solid fa-project-diagram me-2"></i>
+                <span>Built Multi-File RAG Chatbot with FAISS & OpenAI</span>
+              </div>
+              <div class="evidence-item">
+                <i class="fa-solid fa-chart-line me-2"></i>
+                <span>Improved ML model precision by 12%</span>
+              </div>
+            </div>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="95"></div>
+              </div>
+              <small class="text-muted">Production Experience</small>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card main-page-card h-100">
-        <div class="card-body">
-          <h4 class="card-title"><i class="fa-solid fa-brain me-2"></i>ML & Data Science</h4>
-          <p>Model Evaluation, Feature Engineering, ResNet, TensorFlow, PyTorch, Scikit-learn</p>
-          <span class="badge bg-primary">Advanced</span>
+      <div class="col-md-6">
+        <div class="card skill-card main-page-card h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="fa-solid fa-brain me-2"></i>ML & Data Science</h4>
+            <p class="mb-3">Model Evaluation, Feature Engineering, ResNet, TensorFlow, PyTorch, Scikit-learn</p>
+            <div class="skill-evidence">
+              <div class="evidence-item">
+                <i class="fa-solid fa-x-ray me-2"></i>
+                <span>Fine-tuned ResNet50 - 79%+ accuracy</span>
+              </div>
+              <div class="evidence-item">
+                <i class="fa-solid fa-medal me-2"></i>
+                <span>ML Specialization - Stanford & DeepLearning.AI</span>
+              </div>
+            </div>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="88"></div>
+              </div>
+              <small class="text-muted">Advanced Projects</small>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card main-page-card h-100">
-        <div class="card-body">
-          <h4 class="card-title"><i class="fa-solid fa-code me-2"></i>Software & Infrastructure</h4>
-          <p>Python, C#, .NET Core, SQL, JavaScript, TypeScript, Streamlit, REST APIs</p>
-          <span class="badge bg-primary">Advanced</span>
+      <div class="col-md-6">
+        <div class="card skill-card main-page-card h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="fa-solid fa-code me-2"></i>Software & Infrastructure</h4>
+            <p class="mb-3">Python, C#, .NET Core, SQL, JavaScript, TypeScript, Streamlit, REST APIs</p>
+            <div class="skill-evidence">
+              <div class="evidence-item">
+                <i class="fa-solid fa-users me-2"></i>
+                <span>98% client satisfaction in freelancing</span>
+              </div>
+              <div class="evidence-item">
+                <i class="fa-solid fa-bug me-2"></i>
+                <span>Reduced deployment errors by 30%</span>
+              </div>
+            </div>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="90"></div>
+              </div>
+              <small class="text-muted">Professional Experience</small>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card main-page-card h-100">
-        <div class="card-body">
-          <h4 class="card-title"><i class="fa-solid fa-toolbox me-2"></i>Tools</h4>
-          <p>Git, Docker, Postman, VS Code, Jupyter, Kaggle, OCR</p>
-          <span class="badge bg-primary">Advanced</span>
+      <div class="col-md-6">
+        <div class="card skill-card main-page-card h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="fa-solid fa-toolbox me-2"></i>Development Tools</h4>
+            <p class="mb-3">Git, Docker, Postman, VS Code, Jupyter, Kaggle, OCR</p>
+            <div class="skill-evidence">
+              <div class="evidence-item">
+                <i class="fa-solid fa-tachometer-alt me-2"></i>
+                <span>Improved query performance by 40%</span>
+              </div>
+              <div class="evidence-item">
+                <i class="fa-solid fa-clock me-2"></i>
+                <span>Saved 20+ hrs/month with automation</span>
+              </div>
+            </div>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="85"></div>
+              </div>
+              <small class="text-muted">Daily Usage</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -148,15 +210,69 @@ title: About
   </div>
 </section>
 
-<!-- About Summary -->
-<div class="row justify-content-center mb-5">
-  <div class="col-lg-8">
-    <h2 class="text-center h2 mb-3">About</h2>
-    <p class="lead text-center">
-      Innovative engineer focused on Generative AI. Skilled in designing and deploying LLM-based applications, fine-tuning models, and integrating LangChain, FAISS, and Streamlit.
-    </p>
+<!-- YouTube Channel Showcase -->
+<section id="youtube-channel" class="mb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h2 class="text-center h2 mb-4">
+        <i class="fab fa-youtube text-danger me-2"></i>CodeWithMamad Channel
+      </h2>
+      <div class="youtube-showcase card main-page-card">
+        <div class="card-body text-center">
+          <div class="youtube-info mb-4">
+            <div class="youtube-avatar mb-3">
+              <img src="https://avatars0.githubusercontent.com/u/42774761?s=460&u=74f7510520f0797d58e6b362ad566b89cef71023&v=4" 
+                   alt="CodeWithMamad Channel" class="rounded-circle" style="width: 80px; height: 80px;">
+            </div>
+            <h4 class="channel-name mb-2">@CodeWithMamad</h4>
+            <p class="lead mb-3">
+              🚀 Sharing insights on Generative AI, Machine Learning, and Software Development
+            </p>
+            <div class="channel-stats row text-center mb-4">
+              <div class="col-4">
+                <div class="stat-number">🎥</div>
+                <div class="stat-label">Tutorials</div>
+              </div>
+              <div class="col-4">
+                <div class="stat-number">🤖</div>
+                <div class="stat-label">AI Projects</div>
+              </div>
+              <div class="col-4">
+                <div class="stat-number">💡</div>
+                <div class="stat-label">Tech Tips</div>
+              </div>
+            </div>
+            <div class="youtube-topics mb-4">
+              <span class="badge bg-danger me-2 mb-2">
+                <i class="fas fa-robot me-1"></i>LLMs & RAG
+              </span>
+              <span class="badge bg-primary me-2 mb-2">
+                <i class="fas fa-brain me-1"></i>Machine Learning
+              </span>
+              <span class="badge bg-success me-2 mb-2">
+                <i class="fas fa-code me-1"></i>Python Development
+              </span>
+              <span class="badge bg-warning text-dark me-2 mb-2">
+                <i class="fas fa-chart-line me-1"></i>Data Science
+              </span>
+            </div>
+            <div class="youtube-actions">
+              <a href="https://youtube.com/@CodeWithMamad" 
+                 class="btn btn-danger btn-lg subscribe-btn" 
+                 target="_blank" 
+                 aria-label="Subscribe to CodeWithMamad YouTube Channel">
+                <i class="fab fa-youtube me-2"></i>Subscribe & Learn
+              </a>
+              <p class="mt-2 small text-muted">
+                Join me on this journey of exploring cutting-edge AI technology!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- Experience Section (Scattered Animated Jobs) -->
 <section id="experience" class="mb-5">
@@ -220,25 +336,84 @@ title: About
   </div>
 </section>
 
-<!-- Education Section -->
+<!-- Enhanced Education Section -->
 <section id="education" class="mb-5">
-  <h3 class="text-center h2 mb-4">Education</h3>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <ul class="list-group">
-        <li class="list-group-item d-flex align-items-center">
-          <i class="fa-solid fa-graduation-cap fa-lg text-primary me-3"></i>
-          <span>
-            <strong>Master of Science</strong> in Software Engineering
-          </span>
-        </li>
-        <li class="list-group-item d-flex align-items-center">
-          <i class="fa-solid fa-user-graduate fa-lg text-primary me-3"></i>
-          <span>
-            <strong>Bachelor of Science</strong> in Software Engineering (2023)
-          </span>
-        </li>
-      </ul>
+  <h3 class="text-center h2 mb-4">
+    <i class="fa-solid fa-university me-2"></i>Academic Excellence
+  </h3>
+  <div class="row justify-content-center g-4">
+    <div class="col-lg-5 col-md-6">
+      <div class="card education-card main-page-card h-100">
+        <div class="card-body text-center">
+          <div class="education-icon mb-3">
+            <i class="fa-solid fa-graduation-cap fa-3x text-success"></i>
+          </div>
+          <h4 class="card-title text-success mb-2">Master of Science</h4>
+          <p class="degree-field mb-3">Software Engineering</p>
+          <div class="education-details">
+            <div class="achievement-badge mb-3">
+              <i class="fa-solid fa-star me-1"></i>
+              <span>Advanced Research Focus</span>
+            </div>
+            <div class="coursework mb-3">
+              <h6 class="mb-2">Key Specializations:</h6>
+              <div class="coursework-tags">
+                <span class="badge bg-success me-1 mb-1">AI & Machine Learning</span>
+                <span class="badge bg-info me-1 mb-1">Software Architecture</span>
+                <span class="badge bg-primary me-1 mb-1">Research Methods</span>
+              </div>
+            </div>
+          </div>
+          <div class="prestige-indicator">
+            <i class="fa-solid fa-medal text-warning me-2"></i>
+            <small class="text-muted">Graduate Level Excellence</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-6">
+      <div class="card education-card main-page-card h-100">
+        <div class="card-body text-center">
+          <div class="education-icon mb-3">
+            <i class="fa-solid fa-user-graduate fa-3x text-primary"></i>
+          </div>
+          <h4 class="card-title text-primary mb-2">Bachelor of Science</h4>
+          <p class="degree-field mb-2">Software Engineering</p>
+          <p class="graduation-year mb-3">
+            <i class="fa-solid fa-calendar-check me-1"></i>
+            Graduated 2023
+          </p>
+          <div class="education-details">
+            <div class="achievement-badge mb-3">
+              <i class="fa-solid fa-trophy me-1"></i>
+              <span>Foundation Excellence</span>
+            </div>
+            <div class="coursework mb-3">
+              <h6 class="mb-2">Core Competencies:</h6>
+              <div class="coursework-tags">
+                <span class="badge bg-primary me-1 mb-1">Programming</span>
+                <span class="badge bg-secondary me-1 mb-1">Algorithms</span>
+                <span class="badge bg-success me-1 mb-1">Data Structures</span>
+                <span class="badge bg-warning text-dark me-1 mb-1">System Design</span>
+              </div>
+            </div>
+          </div>
+          <div class="prestige-indicator">
+            <i class="fa-solid fa-certificate text-info me-2"></i>
+            <small class="text-muted">Bachelor's Achievement</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-8 text-center">
+      <div class="education-summary">
+        <p class="lead">
+          <i class="fa-solid fa-lightbulb me-2 text-warning"></i>
+          Strong academic foundation in Software Engineering with continuous learning mindset
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -296,15 +471,92 @@ title: About
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-  const expCards = document.querySelectorAll('.exp-card');
-  const observer = new window.IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
+    // Experience cards animation (existing)
+    const expCards = document.querySelectorAll('.exp-card');
+    const expObserver = new window.IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    expCards.forEach(card => expObserver.observe(card));
 
-  expCards.forEach(card => observer.observe(card));
-});
+    // Enhanced Skills Animation
+    const skillCards = document.querySelectorAll('.skill-card');
+    const skillObserver = new window.IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add delay for staggered animation effect
+          setTimeout(() => {
+            entry.target.classList.add('animate-in');
+            
+            // Animate skill level bars
+            const levelFill = entry.target.querySelector('.level-fill');
+            if (levelFill) {
+              const level = levelFill.getAttribute('data-level');
+              levelFill.style.setProperty('--level', level + '%');
+              levelFill.classList.add('animate');
+            }
+          }, index * 200); // Stagger by 200ms
+        }
+      });
+    }, { 
+      threshold: 0.3,
+      rootMargin: '0px 0px -100px 0px' // Trigger animation earlier
+    });
+    
+    skillCards.forEach(card => skillObserver.observe(card));
+
+    // Education cards animation
+    const educationCards = document.querySelectorAll('.education-card');
+    const educationObserver = new window.IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 300); // Stagger animation
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    // Initialize education cards
+    educationCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+      educationObserver.observe(card);
+    });
+
+    // YouTube channel showcase animation
+    const youtubeShowcase = document.querySelector('.youtube-showcase');
+    if (youtubeShowcase) {
+      const youtubeObserver = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'scale(1) translateY(0)';
+          }
+        });
+      }, { threshold: 0.2 });
+      
+      youtubeShowcase.style.opacity = '0';
+      youtubeShowcase.style.transform = 'scale(0.9) translateY(20px)';
+      youtubeShowcase.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      youtubeObserver.observe(youtubeShowcase);
+    }
+
+    // Button hover enhancements (existing)
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px) scale(1.05)';
+      });
+      
+      button.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+      });
+    });
+  });
 </script>
