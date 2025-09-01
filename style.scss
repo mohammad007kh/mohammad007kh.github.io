@@ -275,7 +275,87 @@ footer {
   .timeline-dot,
   .timeline-vertical:before { display: none; }
 }
+.experience-scatter {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 32px;
+  margin: 0 auto;
+  max-width: 900px;
+}
 
+.exp-card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.2em 1.3em;
+  min-height: 140px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-bottom: 16px;
+  pointer-events: auto;
+  outline: none;
+}
+.exp-card.exp-left {
+  justify-self: start;
+  transform: translateX(-80px);
+}
+.exp-card.exp-right {
+  justify-self: end;
+  transform: translateX(80px);
+}
+
+.exp-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exp-role {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3em;
+  color: #007bff;
+}
+.exp-company {
+  font-size: 1em;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 0.4em;
+}
+.exp-impact {
+  margin-bottom: 0.2em;
+  font-size: 1em;
+}
+.exp-date {
+  display: none;
+  font-size: 0.96em;
+  color: #888;
+  margin-top: 0.5em;
+  background: #e9ecef;
+  border-radius: 7px;
+  padding: 2px 9px;
+  font-weight: 500;
+}
+.exp-card:focus .exp-date,
+.exp-card:hover .exp-date {
+  display: inline-block;
+  animation: fadeInDate 0.5s;
+}
+
+@keyframes fadeInDate {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .experience-scatter { grid-template-columns: 1fr; gap: 24px 0; }
+  .exp-card { justify-self: center; }
+  .exp-card.exp-left,
+  .exp-card.exp-right { transform: translateY(60px); }
+  .exp-card.visible { transform: translateY(0); }
+}
 // Accessibility
 [aria-label] {
   outline: none;
