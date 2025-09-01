@@ -275,86 +275,464 @@ footer {
   .timeline-dot,
   .timeline-vertical:before { display: none; }
 }
-.experience-scatter {
+// Enhanced Experience Section - Visual Timeline
+.experience-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  margin: 2rem 0;
+  color: white;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px 32px;
+  overflow: hidden;
+}
+
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.8" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.experience-section h3 {
+  color: white;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
   margin: 0 auto;
-  max-width: 900px;
+  padding: 0 2rem;
 }
 
-.exp-card {
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 100px;
+  width: 4px;
+  background: linear-gradient(to bottom, 
+    rgba(255,255,255,0.3) 0%,
+    rgba(255,255,255,0.8) 50%,
+    rgba(255,255,255,0.3) 100%);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
   position: relative;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 1.2em 1.3em;
-  min-height: 140px;
+  margin-bottom: 4rem;
   opacity: 0;
-  transform: translateX(0);
-  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  margin-bottom: 16px;
-  pointer-events: auto;
-  outline: none;
-}
-.exp-card.exp-left {
-  justify-self: start;
-  transform: translateX(-80px);
-}
-.exp-card.exp-right {
-  justify-self: end;
-  transform: translateX(80px);
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.exp-card.visible {
+.timeline-item.aos-animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-.exp-role {
-  font-weight: bold;
+.timeline-item:nth-child(even) .timeline-card {
+  margin-left: auto;
+  margin-right: calc(50% + 30px);
+}
+
+.timeline-item:nth-child(odd) .timeline-card {
+  margin-right: auto;
+  margin-left: calc(50% + 30px);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border: 4px solid rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #667eea;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.timeline-marker:hover {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+.timeline-marker.recent {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border-color: #48bb78;
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+}
+
+.timeline-marker.highlight {
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+  color: white;
+  border-color: #ed8936;
+  box-shadow: 0 8px 25px rgba(237, 137, 54, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.timeline-marker.foundation {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border-color: #4299e1;
+  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); }
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  color: #2d3748;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 450px;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.timeline-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+}
+
+.timeline-card.featured {
+  border: 2px solid #ed8936;
+  box-shadow: 0 20px 60px rgba(237, 137, 54, 0.2);
+}
+
+.timeline-card.featured::before {
+  background: linear-gradient(90deg, #ed8936, #dd6b20);
+}
+
+.timeline-card.foundation-card {
+  border: 2px solid #4299e1;
+}
+
+.timeline-card.foundation-card::before {
+  background: linear-gradient(90deg, #4299e1, #3182ce);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.role-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.timeline-date {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.impact-metrics {
+  margin-bottom: 1.5rem;
+}
+
+.impact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.impact-item:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateX(5px);
+}
+
+.impact-item.standout {
+  background: linear-gradient(135deg, rgba(72, 187, 120, 0.1), rgba(56, 161, 105, 0.05));
+  border-left-color: #48bb78;
+}
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: 0.25rem;
+}
+
+.achievement-highlight {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-top: 1rem;
+}
+
+.achievement-highlight.featured-achievement {
+  background: linear-gradient(135deg, rgba(237, 137, 54, 0.1), rgba(221, 107, 32, 0.05));
+  border: 1px solid rgba(237, 137, 54, 0.2);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.tech-tag.primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.tech-tag.featured {
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+  color: white;
+  border-color: transparent;
+}
+
+.tech-tag.foundation {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border-color: transparent;
+}
+
+.foundation-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.career-summary {
+  margin-top: 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d3748;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 150px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.career-highlight {
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.1rem;
-  margin-bottom: 0.3em;
-  color: #007bff;
-}
-.exp-company {
-  font-size: 1em;
-  font-weight: 500;
-  color: #666;
-  margin-bottom: 0.4em;
-}
-.exp-impact {
-  margin-bottom: 0.2em;
-  font-size: 1em;
-}
-.exp-date {
-  display: none;
-  font-size: 0.96em;
-  color: #888;
-  margin-top: 0.5em;
-  background: #e9ecef;
-  border-radius: 7px;
-  padding: 2px 9px;
-  font-weight: 500;
-}
-.exp-card:focus .exp-date,
-.exp-card:hover .exp-date {
-  display: inline-block;
-  animation: fadeInDate 0.5s;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-@keyframes fadeInDate {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+.career-highlight i {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0.5rem;
 }
 
-@media (max-width: 900px) {
-  .experience-scatter { grid-template-columns: 1fr; gap: 24px 0; }
-  .exp-card { justify-self: center; }
-  .exp-card.exp-left,
-  .exp-card.exp-right { transform: translateY(60px); }
-  .exp-card.visible { transform: translateY(0); }
+// Responsive Design for Timeline
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 30px;
+  }
+  
+  .timeline-marker {
+    left: 30px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-card,
+  .timeline-item:nth-child(odd) .timeline-card {
+    margin-left: 80px;
+    margin-right: 0;
+    max-width: none;
+  }
+  
+  .timeline-card {
+    padding: 1.5rem;
+  }
+  
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .impact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .metric-content {
+    text-align: center;
+  }
+  
+  .summary-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .career-highlight {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 2rem 0;
+  }
+  
+  .timeline-container {
+    padding: 0 1rem;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-card,
+  .timeline-item:nth-child(odd) .timeline-card {
+    margin-left: 60px;
+  }
+  
+  .tech-stack {
+    justify-content: center;
+  }
 }
 
 // Enhanced Skills Section Styles
