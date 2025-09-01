@@ -1,17 +1,12 @@
----
----
-
 //
 // IMPORTS
 //
-
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
+@import "highlights";
+@import "svg-icons";
 
-/**************/
-/* BASE RULES */
-/**************/
+// BASE RULES
 
 html {
   font-size: 100%;
@@ -34,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -45,28 +39,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
+  font-size: 2.3rem;
+  a { color: inherit; }
 }
-
 h2 {
-  font-size: 24px;
+  font-size: 2rem;
 }
-
 h3 {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
-
 h4 {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: $gray;
 }
-
-p {
-  margin: 15px 0;
-}
+p { margin: 15px 0; }
 
 a {
   color: $blue;
@@ -81,115 +67,54 @@ ul, ol {
   margin: 15px 0;
   padding-left: 30px;
 }
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
+ol ul, ul ol, ul ul, ol ol { margin: 0; }
+ul ul, ol ul { list-style-type: circle; }
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
+img { max-width: 100%; }
 
-ul {
-  list-style-type: disc;
-}
+.gmnoprint img { max-width: none; }
+.date { font-style: italic; color: $gray; }
 
-ol {
-  list-style-type: decimal;
-}
+// Selection colors
+::-moz-selection { color: $black; background: $lightGray; }
+::selection { color: $black; background: $lightGray; }
 
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
-
-.date {
-  font-style: italic;
-  color: $gray;
-}
-
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
-
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
+// Clearfix
 .clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
+.clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
 
-.clearfix:after {
-    clear: both;
-}
+// LAYOUT / SECTIONS
 
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
-
+.wrapper-masthead { margin-bottom: 50px; }
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
+  @include mobile { text-align: center; }
 }
-
 .site-avatar {
   float: left;
   width: 70px;
   height: 70px;
   margin-right: 15px;
-
   @include mobile {
     float: none;
     display: block;
     margin: 0 auto;
   }
-
-  img {
-    border-radius: 5px;
-  }
+  img { border-radius: 50%; }
 }
-
 .site-info {
   float: left;
-
   @include mobile {
     float: none;
     display: block;
     margin: 0 auto;
   }
 }
-
 .site-name {
   margin: 0;
   color: $darkGray;
@@ -199,37 +124,29 @@ img {
   font-size: 28px;
   letter-spacing: 1px;
 }
-
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
+  @include mobile { margin: 3px 0; }
 }
-
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 23px;
   font-family: $helveticaNeue;
   font-size: 18px;
-
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
     font-size: 16px;
   }
-
   a {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
     @include mobile {
       margin: 0 10px;
       color: $blue;
@@ -237,20 +154,15 @@ nav {
   }
 }
 
-//
-// .main
-//
-
+// Main
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
-
 .posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
-
 .post {
   blockquote {
     margin: 1.8em .8em;
@@ -260,15 +172,8 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
+  .comments { margin-top: 10px; }
+  .read-more { text-transform: uppercase; font-size: 15px; }
 }
 
 .wrapper-footer {
@@ -277,13 +182,53 @@ nav {
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
 }
-
 footer {
   padding: 20px 0;
   text-align: center;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+// Portfolio Custom Styles
+.hero-img {
+  width: 120px; height: 120px; object-fit: cover;
+  border-radius: 50%; box-shadow: 0 0 16px rgba(0,0,0,0.15); border: 3px solid #007bff;
+}
+.main-page-card {
+  border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px; background: #fff;
+}
+.project-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background: #e9ecef;
+}
+.timeline .flag-wrapper { display: flex; align-items: center; gap: 10px; }
+.timeline .flag { font-weight: bold; color: #007bff; }
+.timeline .time { font-weight: 500; color: #495057; background: #e9ecef; border-radius: 8px; padding: 2px 8px; font-size: 0.95em; }
+@media (max-width: 768px) {
+  .hero-img { width: 80px; height: 80px; }
+  .timeline .flag-wrapper { flex-direction: column; gap: 4px; }
+  .main-page-card { margin-bottom: 16px; }
+  .project-thumb { height: 80px; }
+}
+
+// Improved badges
+.badge.bg-primary {
+  background-color: #007bff !important;
+  color: #fff !important;
+  font-size: 1em;
+  padding: 0.7em 1em;
+}
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+  color: #fff !important;
+  font-size: 0.9em;
+  margin-right: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+// Accessibility
+[aria-label] {
+  outline: none;
+}
