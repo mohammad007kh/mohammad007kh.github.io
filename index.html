@@ -3,9 +3,6 @@ layout: default
 published: true
 title: About
 ---
-<!-- Fonts and Icons (kept in layout for performance) -->
-
-<!-- Hero Section -->
 <section class="hero text-center py-5" id="about">
   <div class="container">
     <h1 class="display-5 fw-bold mb-2">Mohammad Khoddami</h1>
@@ -22,35 +19,31 @@ title: About
   </div>
 </section>
 
-<!-- YouTube Showcase (replaces second About) -->
 <section id="youtube-showcase" class="mb-5 container">
   <h3 class="text-center h2 mb-4">🎥 Latest on YouTube — AI, Coding & Beyond</h3>
   <div class="yt-grid">
-    <!-- Replace the sample video IDs with your real ones -->
     <article class="yt-card" tabindex="0">
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" aria-label="Watch video 1">
         <div class="yt-thumb">
-          <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="YouTube thumbnail 1">
+          <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="YouTube thumbnail 1" loading="lazy">
           <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
         </div>
         <h4 class="yt-title">Building Fast RAG systems in production</h4>
       </a>
     </article>
-
     <article class="yt-card" tabindex="0">
       <a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ" target="_blank" rel="noopener" aria-label="Watch video 2">
         <div class="yt-thumb">
-          <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="YouTube thumbnail 2">
+          <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="YouTube thumbnail 2" loading="lazy">
           <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
         </div>
         <h4 class="yt-title">Prompt Engineering techniques that scale</h4>
       </a>
     </article>
-
     <article class="yt-card" tabindex="0">
       <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" rel="noopener" aria-label="Watch video 3">
         <div class="yt-thumb">
-          <img src="https://img.youtube.com/vi/oHg5SJYRHA0/hqdefault.jpg" alt="YouTube thumbnail 3">
+          <img src="https://img.youtube.com/vi/oHg5SJYRHA0/hqdefault.jpg" alt="YouTube thumbnail 3" loading="lazy">
           <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
         </div>
         <h4 class="yt-title">From prototype to deployed generator</h4>
@@ -62,7 +55,6 @@ title: About
   </div>
 </section>
 
-<!-- Skills Section -->
 <section id="skills" class="mb-5 container">
   <h3 class="text-center h2 mb-4">Skills</h3>
   <div class="skills-grid">
@@ -74,172 +66,49 @@ title: About
       <div class="skill-bar" aria-hidden="true"><span></span></div>
       <div class="skill-tooltip">Expert — Built multi-doc QA chatbot using OCR + FAISS</div>
     </div>
-
     <div class="skill-card" data-value="85" aria-label="ML and Data Science skill level">
       <div class="skill-meta">
-        <h4><i class="fa-solid fa-brain me-2"></i>ML &amp; Data Science</h4>
+        <h4><i class="fa-solid fa-brain me-2"></i>ML & Data Science</h4>
         <p class="muted">TensorFlow, PyTorch, ResNet, Model Eval</p>
       </div>
       <div class="skill-bar"><span></span></div>
       <div class="skill-tooltip">Advanced — Fine-tuned ResNet50 for chest X-ray classification</div>
     </div>
-
     <div class="skill-card" data-value="88" aria-label="Software & Infrastructure skill level">
       <div class="skill-meta">
-        <h4><i class="fa-solid fa-code me-2"></i>Software &amp; Infrastructure</h4>
-        <p class="muted">Python, .NET Core, SQL, JS/TS, Streamlit, REST</p>
+        <h4><i class="fa-solid fa-code me-2"></i>Software & Infra</h4>
+        <p class="muted">Python, Flask, FastAPI, Docker, Kubernetes</p>
       </div>
       <div class="skill-bar"><span></span></div>
-      <div class="skill-tooltip">Advanced — Production microservices & CI/CD</div>
-    </div>
-
-    <div class="skill-card" data-value="83" aria-label="Tools skill level">
-      <div class="skill-meta">
-        <h4><i class="fa-solid fa-toolbox me-2"></i>Tools</h4>
-        <p class="muted">Git, Docker, VSCode, Jupyter, Kaggle</p>
-      </div>
-      <div class="skill-bar"><span></span></div>
-      <div class="skill-tooltip">Advanced — Containerized deployments</div>
+      <div class="skill-tooltip">Advanced — Built production APIs & deployed ML microservices</div>
     </div>
   </div>
 </section>
 
-<!-- Projects Section -->
 <section id="projects" class="mb-5 container">
   <h3 class="text-center h2 mb-4">Projects</h3>
-
-  <div class="project-controls text-center mb-3" role="tablist" aria-label="Project filters">
-    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-    <button class="filter-btn" data-filter="ai" role="tab">AI</button>
-    <button class="filter-btn" data-filter="web" role="tab">Web</button>
-    <button class="filter-btn" data-filter="mobile" role="tab">Mobile</button>
+  <div class="text-center mb-3">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="AI">AI</button>
+    <button class="filter-btn" data-filter="Web">Web</button>
+    <button class="filter-btn" data-filter="ML">ML</button>
   </div>
 
   <div class="projects-grid">
-    <!-- Example project card: swap image src for real screenshots -->
-    <article class="project-card" data-tags="ai" tabindex="0">
-      <img class="project-thumb" src="/assets/screens/multifile-chatbot.png" alt="Multi-File Chatbot screenshot">
-      <div class="project-body">
-        <div class="project-header">
-          <h4><i class="fa-solid fa-comments me-2"></i>Multi-File Chatbot with RAG</h4>
-          <div class="project-badges">
-            <span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">FAISS</span>
-          </div>
-        </div>
-        <p class="muted">Streamlit app for Q&A over documents using OCR, FAISS, and OpenAI.</p>
-        <div class="project-actions">
-          <a href="https://github.com/mohammad007kh/Multi-File-Ai-Chatbot" class="btn btn-sm" aria-label="View Multi-File Chatbot Project">View Project</a>
-        </div>
-      </div>
+    <article class="project-card" data-tags="AI,ML" tabindex="0">
+      <h4>RAG Chatbot</h4>
+      <p>Multi-doc QA with OCR and FAISS.</p>
+      <a href="https://github.com/mohammad007kh/rag-chatbot" class="btn btn-sm btn-outline" aria-label="View project on GitHub">View on GitHub</a>
     </article>
-
-    <article class="project-card" data-tags="ai" tabindex="0">
-      <img class="project-thumb" src="/assets/screens/pneumonia-resnet.png" alt="Pneumonia Detection screenshot">
-      <div class="project-body">
-        <div class="project-header">
-          <h4><i class="fa-solid fa-x-ray me-2"></i>Pneumonia Detection with Deep Learning</h4>
-          <div class="project-badges"><span class="badge">TensorFlow</span><span class="badge">Streamlit</span></div>
-        </div>
-        <p class="muted">Fine-tuned ResNet50 on chest X-rays, deployed via Streamlit.</p>
-        <div class="project-actions">
-          <a href="https://github.com/mohammad007kh/Chest-X-ray-Pneumonia-Classifier-ResNet50-" class="btn btn-sm" aria-label="View Pneumonia Detection Project">View Project</a>
-        </div>
-      </div>
+    <article class="project-card" data-tags="Web" tabindex="0">
+      <h4>Portfolio Website</h4>
+      <p>Jekyll-based, responsive, dark/light theme.</p>
+      <a href="https://github.com/mohammad007kh/portfolio" class="btn btn-sm btn-outline" aria-label="View project on GitHub">View on GitHub</a>
     </article>
-
-    <article class="project-card" data-tags="ai" tabindex="0">
-      <img class="project-thumb" src="/assets/screens/stable-diffusion.png" alt="Stable Diffusion screenshot">
-      <div class="project-body">
-        <div class="project-header">
-          <h4><i class="fa-solid fa-image me-2"></i>Image Generation with Stable Diffusion</h4>
-          <div class="project-badges"><span class="badge">Diffusers</span><span class="badge">Kaggle</span></div>
-        </div>
-        <p class="muted">Interactive text-to-image app using Hugging Face Diffusers.</p>
-        <div class="project-actions">
-          <a href="https://www.kaggle.com/code/mohammad007kh/stable-diffusion-text-to-image" class="btn btn-sm" aria-label="View Stable Diffusion Project">View Project</a>
-        </div>
-      </div>
+    <article class="project-card" data-tags="ML" tabindex="0">
+      <h4>Leaf Disease Classifier</h4>
+      <p>ResNet50 & TensorFlow for leaf disease detection.</p>
+      <a href="https://github.com/mohammad007kh/leaf-disease" class="btn btn-sm btn-outline" aria-label="View project on GitHub">View on GitHub</a>
     </article>
-
-    <!-- Add more projects similarly -->
-  </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="mb-5 container">
-  <h3 class="text-center h2 mb-4">Experience</h3>
-
-  <div class="timeline-vertical" role="list">
-    <div class="timeline-row" role="listitem">
-      <div class="timeline-dot" aria-hidden="true"></div>
-      <div class="timeline-card">
-        <div class="exp-role">Machine Learning Intern — <span class="exp-company">DESNA CO, Iran</span></div>
-        <div class="exp-impact">
-          <ul>
-            <li>Improved model precision by <strong>12%</strong>.</li>
-            <li>Automated reporting, saving <strong>20+ hrs/month</strong>.</li>
-          </ul>
-        </div>
-        <div class="exp-date">Feb 2023 - Jun 2023</div>
-      </div>
-    </div>
-
-    <div class="timeline-row" role="listitem">
-      <div class="timeline-dot" aria-hidden="true"></div>
-      <div class="timeline-card">
-        <div class="exp-role">IT Engineer — <span class="exp-company">Iran Insurance Corporation</span></div>
-        <div class="exp-impact">
-          <ul><li>Improved branch efficiency by <strong>15%</strong>.</li></ul>
-        </div>
-        <div class="exp-date">Jul 2022 - Sep 2022</div>
-      </div>
-    </div>
-
-    <!-- More timeline rows... -->
-  </div>
-</section>
-
-<!-- Education -->
-<section id="education" class="mb-5 container">
-  <h3 class="text-center h2 mb-4">Education</h3>
-  <div class="education-grid">
-    <div class="edu-card">
-      <div class="edu-icon">🎓</div>
-      <div class="edu-body">
-        <strong>Master of Science</strong> in Software Engineering
-      </div>
-    </div>
-
-    <div class="edu-card">
-      <div class="edu-icon">🎓</div>
-      <div class="edu-body">
-        <strong>Bachelor of Science</strong> in Software Engineering (2023)
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Certifications -->
-<section id="certifications" class="mb-5 container">
-  <h3 class="text-center h2 mb-4">Certifications</h3>
-
-  <div class="cert-grid">
-    <div class="cert-card">
-      <div class="cert-head"><i class="fa-brands fa-python fa-2x"></i><strong>Python for Data Science, AI &amp; Development</strong></div>
-      <div class="muted">IBM (2024)</div>
-      <a href="https://www.credly.com/badges/9e0198d7-f2c7-4f3c-bc5b-6e9e5f08f9c5" class="badge-link" target="_blank" rel="noopener">View Certificate</a>
-    </div>
-
-    <div class="cert-card">
-      <div class="cert-head"><i class="fa-solid fa-brain fa-2x"></i><strong>Machine Learning Specialization</strong></div>
-      <div class="muted">DeepLearning.AI &amp; Stanford University (2024)</div>
-      <a href="#" class="badge-link">View Certificate</a>
-    </div>
-
-    <div class="cert-card">
-      <div class="cert-head"><i class="fa-solid fa-certificate fa-2x"></i><strong>.NET Application Development Foundation</strong></div>
-      <div class="muted">Tehran Institute of Technology (2017)</div>
-      <a href="#" class="badge-link">View Certificate</a>
-    </div>
   </div>
 </section>
