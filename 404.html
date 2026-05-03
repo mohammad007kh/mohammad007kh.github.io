@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Mohammad Khoddami</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .nf {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .nf-code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: clamp(5rem, 18vw, 11rem);
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--text);
+    }
+    .nf-code span { color: var(--accent); }
+    .nf-msg {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--muted);
+      max-width: 50ch;
+      margin: 1.5rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/" class="logo" aria-label="Home">MK<span class="logo-dot">.</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#about"><span class="nav-num">01</span>About</a></li>
+        <li><a href="/#work"><span class="nav-num">02</span>Work</a></li>
+        <li><a href="/#contact"><span class="nav-num">03</span>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="nf">
+      <p class="eyebrow">Error</p>
+      <h1 class="nf-code">4<span>0</span>4</h1>
+      <p class="nf-msg">
+        This page doesn't exist — or it did once, in a previous version of this site.
+        Either way, it's gone now.
+      </p>
+      <a href="/" class="cta">
+        <span>Back home</span>
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

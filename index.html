@@ -1,114 +1,370 @@
----
-layout: default
-published: true
-title: About
----
-<section class="hero text-center py-5" id="about">
-  <div class="container">
-    <h1 class="display-5 fw-bold mb-2">Mohammad Khoddami</h1>
-    <p class="lead mb-3">Generative AI Engineer &amp; LLM Solutions Architect</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammad Khoddami — AI Engineer</title>
+  <meta name="description" content="Full-stack AI engineer building production-grade GenAI systems — RAG pipelines, multi-node agent architectures, and the governance layers that keep them honest." />
 
-    <div class="hero-ctas mb-3" role="group" aria-label="Primary actions">
-      <a href="/resume.pdf" class="btn btn-primary btn-cta" aria-label="Download Resume">Download Resume</a>
-      <a href="mailto:khoddami.mohammad007@gmail.com" class="btn btn-outline btn-cta" aria-label="Contact Me">Contact Me</a>
-      <a href="https://linkedin.com/in/mohammad007kh" class="icon-btn" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/mohammad007kh" class="icon-btn" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-    </div>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohammad Khoddami — AI Engineer" />
+  <meta property="og:description" content="Full-stack AI engineer. RAG pipelines, autonomous agents, and the governance layers that keep them honest." />
+  <meta property="og:url" content="https://mohammad007kh.github.io" />
+  <meta name="twitter:card" content="summary" />
 
-    <p class="mt-4 hero-pitch"><strong>Elevator Pitch:</strong> I design and build production-ready Generative AI solutions for enterprise clients. Let’s connect!</p>
-  </div>
-</section>
+  <meta name="theme-color" content="#0a0a0a" />
 
-<section id="youtube-showcase" class="mb-5 container">
-  <h3 class="text-center h2 mb-4">🎥 Latest on YouTube — AI, Coding & Beyond</h3>
-  <div class="yt-grid">
-    <article class="yt-card" tabindex="0">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" aria-label="Watch video 1">
-        <div class="yt-thumb">
-          <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="YouTube thumbnail 1" loading="lazy">
-          <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
-        </div>
-        <h4 class="yt-title">Building Fast RAG systems in production</h4>
-      </a>
-    </article>
-    <article class="yt-card" tabindex="0">
-      <a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ" target="_blank" rel="noopener" aria-label="Watch video 2">
-        <div class="yt-thumb">
-          <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="YouTube thumbnail 2" loading="lazy">
-          <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
-        </div>
-        <h4 class="yt-title">Prompt Engineering techniques that scale</h4>
-      </a>
-    </article>
-    <article class="yt-card" tabindex="0">
-      <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" rel="noopener" aria-label="Watch video 3">
-        <div class="yt-thumb">
-          <img src="https://img.youtube.com/vi/oHg5SJYRHA0/hqdefault.jpg" alt="YouTube thumbnail 3" loading="lazy">
-          <div class="play-overlay" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
-        </div>
-        <h4 class="yt-title">From prototype to deployed generator</h4>
-      </a>
-    </article>
-  </div>
-  <div class="text-center mt-3">
-    <a class="btn btn-outline" href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank" rel="noopener" aria-label="Visit full YouTube channel">View full channel</a>
-  </div>
-</section>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='52' font-weight='500' text-anchor='middle' fill='%23fafafa'%3EM%3C/text%3E%3Ccircle cx='78' cy='78' r='6' fill='%23ff5e1a'/%3E%3C/svg%3E" />
 
-<section id="skills" class="mb-5 container">
-  <h3 class="text-center h2 mb-4">Skills</h3>
-  <div class="skills-grid">
-    <div class="skill-card" data-value="95" aria-label="Generative AI skill level">
-      <div class="skill-meta">
-        <h4><i class="fa-solid fa-lightbulb me-2"></i>Generative AI</h4>
-        <p class="muted">LLMs, RAG, Prompt Engineering, LangChain, OpenAI, HuggingFace</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/" class="logo" aria-label="Home">MK<span class="logo-dot">.</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about"><span class="nav-num">01</span>About</a></li>
+        <li><a href="#work"><span class="nav-num">02</span>Work</a></li>
+        <li><a href="#stack"><span class="nav-num">03</span>Stack</a></li>
+        <li><a href="#teaching"><span class="nav-num">04</span>Teaching</a></li>
+        <li><a href="#contact"><span class="nav-num">05</span>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <p class="eyebrow reveal">Mohammad Khoddami</p>
+      <h1 class="hero-title reveal">
+        I build<br>
+        <span class="rotator" data-words="AI systems,LLM apps,ML pipelines,RAG systems,AI agents,guardrails" aria-live="polite" aria-atomic="true">
+          <span class="rotator-text">AI systems</span><span class="caret" aria-hidden="true">_</span>
+        </span>
+      </h1>
+      <p class="lede reveal">
+        Full-stack AI engineer building production-grade GenAI systems —
+        and the governance layers that keep them honest.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#work" class="cta">
+          <span>Selected work</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="#contact" class="cta cta-ghost">
+          <span>Get in touch</span>
+        </a>
       </div>
-      <div class="skill-bar" aria-hidden="true"><span></span></div>
-      <div class="skill-tooltip">Expert — Built multi-doc QA chatbot using OCR + FAISS</div>
-    </div>
-    <div class="skill-card" data-value="85" aria-label="ML and Data Science skill level">
-      <div class="skill-meta">
-        <h4><i class="fa-solid fa-brain me-2"></i>ML & Data Science</h4>
-        <p class="muted">TensorFlow, PyTorch, ResNet, Model Eval</p>
-      </div>
-      <div class="skill-bar"><span></span></div>
-      <div class="skill-tooltip">Advanced — Fine-tuned ResNet50 for chest X-ray classification</div>
-    </div>
-    <div class="skill-card" data-value="88" aria-label="Software & Infrastructure skill level">
-      <div class="skill-meta">
-        <h4><i class="fa-solid fa-code me-2"></i>Software & Infra</h4>
-        <p class="muted">Python, Flask, FastAPI, Docker, Kubernetes</p>
-      </div>
-      <div class="skill-bar"><span></span></div>
-      <div class="skill-tooltip">Advanced — Built production APIs & deployed ML microservices</div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="projects" class="mb-5 container">
-  <h3 class="text-center h2 mb-4">Projects</h3>
-  <div class="text-center mb-3">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="AI">AI</button>
-    <button class="filter-btn" data-filter="Web">Web</button>
-    <button class="filter-btn" data-filter="ML">ML</button>
-  </div>
+    <section id="about" class="section">
+      <header class="section-header">
+        <span class="section-num reveal">01 — About</span>
+        <h2 class="section-title reveal">The short version.</h2>
+      </header>
+      <div class="section-body reveal">
+        <p>
+          I'm a full-stack AI engineer specializing in production-grade Generative AI applications.
+          I design RAG pipelines, multi-node agent architectures, and observability systems using
+          LangChain, LangGraph, FastAPI, and modern cloud infrastructure.
+        </p>
+        <p>
+          AI-assisted development is the future — but only when it's governed, structured, and
+          predictable. That's why I build the guardrails, not just the features.
+        </p>
+      </div>
 
-  <div class="projects-grid">
-    <article class="project-card" data-tags="AI,ML" tabindex="0">
-      <h4>RAG Chatbot</h4>
-      <p>Multi-doc QA with OCR and FAISS.</p>
-      <a href="https://github.com/mohammad007kh/rag-chatbot" class="btn btn-sm btn-outline" aria-label="View project on GitHub">View on GitHub</a>
-    </article>
-    <article class="project-card" data-tags="Web" tabindex="0">
-      <h4>Portfolio Website</h4>
-      <p>Jekyll-based, responsive, dark/light theme.</p>
-      <a href="https://github.com/mohammad007kh/portfolio" class="btn btn-sm btn-outline" aria-label="View project on GitHub">View on GitHub</a>
-    </article>
-    <article class="project-card" data-tags="ML" tabindex="0">
-      <h4>Leaf Disease Classifier</h4>
-      <p>ResNet50 & TensorFlow for leaf disease detection.</p>
-      <a href="https://github.com/mohammad007kh/leaf-disease" class="btn btn-sm btn-outline" aria-label="View project on GitHub">View on GitHub</a>
-    </article>
-  </div>
-</section>
+      <div class="principles">
+        <article class="principle reveal">
+          <p class="principle-label">On leverage</p>
+          <p>
+            Using AI to build software isn't cheating — it's leverage. The value isn't in
+            memorizing syntax. It's in knowing <em>what</em> to build, <em>how</em> to architect
+            it, and <em>when</em> the AI is wrong. That's engineering.
+          </p>
+        </article>
+        <article class="principle reveal">
+          <p class="principle-label">On governance</p>
+          <p>
+            The most dangerous thing about AI coding isn't that it fails — it's that it succeeds
+            confidently in the wrong direction. That's why I built Atomic Spec: to make AI
+            development predictable, auditable, and safe.
+          </p>
+        </article>
+        <article class="principle reveal">
+          <p class="principle-label">On shipping</p>
+          <p>
+            A working demo beats a perfect README. Architecture matters, but only if it runs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <header class="section-header">
+        <span class="section-num reveal">02 — Selected work</span>
+        <h2 class="section-title reveal">Things I've built.</h2>
+      </header>
+
+      <ul class="work-list">
+        <li class="work-item work-item-static reveal">
+          <span class="work-num">01</span>
+          <div class="work-meta">
+            <h3>Internal Knowledge AI Agent</h3>
+            <p>
+              Enterprise knowledge retrieval. A 10-node LangGraph pipeline with intent
+              clarification, self-critique, and full observability — on FastAPI, Postgres + pgvector,
+              and Celery.
+            </p>
+          </div>
+          <div class="work-tags" aria-hidden="true">
+            <span>LangGraph</span><span>RAG</span><span>FastAPI</span>
+          </div>
+          <span class="work-status">In development</span>
+        </li>
+
+        <li class="work-item reveal">
+          <a href="https://chappygo-os.github.io/Atomic-Spec/" target="_blank" rel="noopener noreferrer" aria-label="View Atomic Spec">
+            <span class="work-num">02</span>
+            <div class="work-meta">
+              <h3>Atomic Spec</h3>
+              <p>
+                Open-source governance layer for AI coding agents. 8 directives, 18 gates,
+                21 specialized subagents — designed to stop AIs from confidently shipping the
+                wrong code.
+              </p>
+            </div>
+            <div class="work-tags" aria-hidden="true">
+              <span>Open Source</span><span>Spec</span><span>Tooling</span>
+            </div>
+            <span class="work-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li class="work-item reveal">
+          <a href="https://github.com/mohammad007kh/Multi-File-Ai-Chatbot" target="_blank" rel="noopener noreferrer" aria-label="View Multi-File AI Chatbot on GitHub">
+            <span class="work-num">03</span>
+            <div class="work-meta">
+              <h3>Multi-File AI Chatbot</h3>
+              <p>
+                Conversational interface for multi-document Q&amp;A. Upload PDFs, DOCX, and
+                images and chat with the content. Built on LangChain + Streamlit.
+              </p>
+            </div>
+            <div class="work-tags" aria-hidden="true">
+              <span>LangChain</span><span>RAG</span><span>Streamlit</span>
+            </div>
+            <span class="work-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li class="work-item reveal">
+          <a href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+            <span class="work-num">04</span>
+            <div class="work-meta">
+              <h3>Chest X-Ray Analysis</h3>
+              <p>
+                Transfer-learning research. Fine-tuned ResNet50 on chest X-ray data for
+                medical image classification.
+              </p>
+            </div>
+            <div class="work-tags" aria-hidden="true">
+              <span>PyTorch</span><span>ResNet50</span><span>ML</span>
+            </div>
+            <span class="work-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+
+        <li class="work-item reveal">
+          <a href="https://github.com/lmstudio-ai/localization" target="_blank" rel="noopener noreferrer" aria-label="View LM Studio localization repo">
+            <span class="work-num">05</span>
+            <div class="work-meta">
+              <h3>LM Studio — Persian Localization</h3>
+              <p>
+                First Farsi translation for the popular local-LLM application. Open-source
+                contribution.
+              </p>
+            </div>
+            <div class="work-tags" aria-hidden="true">
+              <span>Open Source</span><span>i18n</span>
+            </div>
+            <span class="work-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="stack" class="section">
+      <header class="section-header">
+        <span class="section-num reveal">03 — Stack</span>
+        <h2 class="section-title reveal">Tools I reach for.</h2>
+      </header>
+
+      <dl class="stack reveal">
+        <dt class="stack-category">AI / LLM</dt>
+        <dd class="stack-tags">
+          <span class="stack-tag">LangGraph</span>
+          <span class="stack-tag">LangChain</span>
+          <span class="stack-tag">RAG</span>
+          <span class="stack-tag">AI Agents</span>
+          <span class="stack-tag">Prompt Eng.</span>
+          <span class="stack-tag">pgvector</span>
+          <span class="stack-tag">FAISS</span>
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">TensorFlow</span>
+          <span class="stack-tag">Langfuse</span>
+          <span class="stack-tag">OpenAI</span>
+          <span class="stack-tag">Hugging Face</span>
+        </dd>
+
+        <dt class="stack-category">Backend</dt>
+        <dd class="stack-tags">
+          <span class="stack-tag">Python 3.12</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">ASP.NET Core</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">MongoDB</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">Celery</span>
+          <span class="stack-tag">SQLAlchemy</span>
+          <span class="stack-tag">Alembic</span>
+        </dd>
+
+        <dt class="stack-category">Frontend</dt>
+        <dd class="stack-tags">
+          <span class="stack-tag">Next.js 15</span>
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Tailwind</span>
+          <span class="stack-tag">shadcn/ui</span>
+          <span class="stack-tag">Streamlit</span>
+        </dd>
+
+        <dt class="stack-category">Infra</dt>
+        <dd class="stack-tags">
+          <span class="stack-tag">Docker</span>
+          <span class="stack-tag">Docker Compose</span>
+          <span class="stack-tag">Git</span>
+          <span class="stack-tag">CI/CD</span>
+          <span class="stack-tag">MinIO</span>
+        </dd>
+
+        <dt class="stack-category">Languages</dt>
+        <dd class="stack-tags">
+          <span class="stack-tag">English</span>
+          <span class="stack-tag">Persian (Native)</span>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="teaching" class="section">
+      <header class="section-header">
+        <span class="section-num reveal">04 — Teaching</span>
+        <h2 class="section-title reveal">@CodeWithMamad.</h2>
+      </header>
+
+      <div class="section-body reveal">
+        <p>
+          Seven-plus years of free programming tutorials and courses on YouTube — web
+          development, AI, and software-engineering fundamentals.
+        </p>
+      </div>
+
+      <div class="yt-grid reveal">
+        <div class="yt-embed">
+          <iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/videoseries?si=DRBD6jmTAbZudeJb&amp;list=PLHSUcJ83dbdF3KwMFgY0b7cEzryXukzhL"
+            title="@CodeWithMamad — Course playlist 01"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="yt-embed">
+          <iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/videoseries?si=7znmv0uWjKOhiTTq&amp;list=PLHSUcJ83dbdE_vTqh5ZweZaE-iC-a8flp"
+            title="@CodeWithMamad — Course playlist 02"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer" class="cta">
+        <span>Visit channel</span>
+        <span class="cta-arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <h3 class="subsection-title">Certifications</h3>
+      <ul class="certs">
+        <li class="cert reveal">
+          <a href="https://coursera.org/share/c64dc9b8ea4bf1df6f00a6137e96af9d" target="_blank" rel="noopener noreferrer">
+            <span class="cert-title">Python for Data Science, AI &amp; Development</span>
+            <span class="cert-issuer">IBM · Coursera</span>
+            <span class="cert-year">2023</span>
+            <span class="cert-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li class="cert reveal">
+          <a href="https://www.coursera.org/account/accomplishments/certificate/D4UGBLS58DAP" target="_blank" rel="noopener noreferrer">
+            <span class="cert-title">Unsupervised Learning, Recommenders, Reinforcement Learning</span>
+            <span class="cert-issuer">Stanford · DeepLearning.AI</span>
+            <span class="cert-year">2023</span>
+            <span class="cert-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li class="cert reveal">
+          <a href="https://www.coursera.org/account/accomplishments/certificate/N5TH9CCPM57C" target="_blank" rel="noopener noreferrer">
+            <span class="cert-title">Advanced Learning Algorithms</span>
+            <span class="cert-issuer">Stanford · DeepLearning.AI</span>
+            <span class="cert-year">2023</span>
+            <span class="cert-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li class="cert reveal">
+          <a href="https://www.coursera.org/account/accomplishments/certificate/2PGXX9QZSVQQ" target="_blank" rel="noopener noreferrer">
+            <span class="cert-title">Supervised Machine Learning: Regression &amp; Classification</span>
+            <span class="cert-issuer">Stanford · DeepLearning.AI</span>
+            <span class="cert-year">2023</span>
+            <span class="cert-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <header class="section-header">
+        <span class="section-num reveal">05 — Contact</span>
+        <h2 class="section-title reveal">Let's talk.</h2>
+      </header>
+      <div class="section-body reveal">
+        <p>
+          If you're working on something interesting in Generative AI, agent architectures,
+          or AI governance — let's connect on LinkedIn.
+        </p>
+        <a href="https://www.linkedin.com/in/mohammadkhoddami/" target="_blank" rel="noopener noreferrer" class="big-link">
+          linkedin.com/in/mohammadkhoddami<span class="big-link-arrow" aria-hidden="true">↗</span>
+        </a>
+        <ul class="socials">
+          <li><a href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Mohammad Khoddami</p>
+    <p class="muted">Built from scratch.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
