@@ -3,6 +3,30 @@
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Theme toggle ---------- */
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    function getCurrentTheme() {
+      return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    }
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      themeToggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    }
+    // initialize aria-pressed to match the inline-script's choice
+    themeToggle.setAttribute('aria-pressed', getCurrentTheme() === 'light' ? 'true' : 'false');
+
+    themeToggle.addEventListener('click', () => {
+      const next = getCurrentTheme() === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
   /* ---------- Cursor glow ---------- */
   const glow = document.querySelector('.cursor-glow');
   if (glow && !prefersReducedMotion && window.matchMedia('(hover: hover)').matches) {
@@ -74,6 +98,17 @@
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add('visible'));
+  }
+
+  /* ---------- Marquee: duplicate AI/LLM stack track for seamless loop ---------- */
+  const marqueeTrack = document.querySelector('.stack-tags-marquee .marquee-track');
+  if (marqueeTrack && !prefersReducedMotion) {
+    const originals = Array.from(marqueeTrack.children);
+    originals.forEach((el) => {
+      const clone = el.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      marqueeTrack.appendChild(clone);
+    });
   }
 
   /* ---------- Tagline rotator (typewriter) ---------- */
