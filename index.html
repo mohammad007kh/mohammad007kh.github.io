@@ -79,6 +79,10 @@
         Full-stack AI engineer building production-grade GenAI systems,
         and the governance layers that keep them honest.
       </p>
+      <p class="lede-sub reveal">
+        Forward-deployed: I sit between what clients need and what gets shipped &mdash;
+        spec to production, no layer in between.
+      </p>
       <div class="hero-ctas reveal">
         <a href="#work" class="cta">
           <span>Selected work</span>
@@ -122,6 +126,16 @@
         </article>
       </div>
 
+      <aside class="callout reveal">
+        <p class="callout-label">Reliability, concretely</p>
+        <p>
+          Citation accuracy on the document platform fell from 96% to 82% after a release.
+          Root cause: fixed-token chunking was splitting clauses mid-sentence, so the retrieved
+          span no longer matched the clause it cited. Structure-aware chunking plus a confidence
+          threshold put it back at 96%.
+        </p>
+      </aside>
+
       <div class="section-body reveal">
         <p>
           I'm a full-stack AI engineer specializing in production-grade Generative AI applications.
@@ -131,6 +145,11 @@
         <p>
           AI-assisted development is the future, but only when it's governed, structured, and
           predictable. That's why I build the guardrails, not just the features.
+        </p>
+        <p>
+          I work forward-deployed. I sit with the client, turn their requests into specs, build
+          them, and come back for review with the people who actually use the thing &mdash; no PM
+          layer in between. The feedback loop is hours, not sprints.
         </p>
       </div>
     </section>
@@ -143,8 +162,57 @@
 
       <ul class="work-list">
         <li class="work-item reveal">
-          <a href="https://github.com/mohammad007kh/Internal-Knowledge-AI-Agent/" target="_blank" rel="noopener noreferrer" aria-label="View Internal Knowledge AI Agent on GitHub">
+          <div class="work-static">
             <span class="work-num">01</span>
+            <div class="work-meta">
+              <div class="work-title-row">
+                <h3>AI content &amp; document generation platforms</h3>
+                <span class="work-status">Live &middot; production</span>
+              </div>
+              <p>
+                Two multi-tenant SaaS products serving real users today. One runs multi-mode AI
+                content generation with credit metering and a multi-language UI. The other does
+                RAG-grounded document drafting with per-clause source citation, structure-aware
+                chunking, and confidence scoring.
+              </p>
+              <p class="work-note">Client work &mdash; product names withheld.</p>
+            </div>
+            <div class="work-tags" aria-hidden="true">
+              <span>Next.js</span><span>FastAPI</span><span>Gemini</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="work-item reveal">
+          <a href="https://chappygo-os.github.io/Atomic-Spec/" target="_blank" rel="noopener noreferrer" aria-label="View Atomic Spec">
+            <span class="work-num">02</span>
+            <div class="work-meta">
+              <div class="work-title-row">
+                <h3>Atomic Spec</h3>
+                <span class="work-status work-status--quiet">v0.5.0</span>
+              </div>
+              <p>
+                Open-source governance layer for AI coding agents. Nine Prime Directives and gated
+                checkpoints stop an agent from confidently shipping the wrong code. v0.5.0 derives a
+                per-layer test strategy from one up-front yes/no question, routes it through 12
+                testing subagents, and won&rsquo;t schedule a single test task until a human approves
+                the strategy.
+              </p>
+              <p class="work-note">
+                Validated end-to-end on 5 agents &mdash; Claude Code, Cursor, GitHub Copilot,
+                Gemini CLI, Windsurf. 12 more experimental, 17 total.
+              </p>
+            </div>
+            <div class="work-tags" aria-hidden="true">
+              <span>Open Source</span><span>Governance</span><span>Testing</span>
+            </div>
+            <span class="work-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+
+        <li class="work-item reveal">
+          <a href="https://github.com/mohammad007kh/Internal-Knowledge-AI-Agent/" target="_blank" rel="noopener noreferrer" aria-label="View Internal Knowledge AI Agent on GitHub">
+            <span class="work-num">03</span>
             <div class="work-meta">
               <div class="work-title-row">
                 <h3>Internal Knowledge AI Agent</h3>
@@ -159,67 +227,15 @@
             <div class="work-tags" aria-hidden="true">
               <span>LangGraph</span><span>RAG</span><span>FastAPI</span>
             </div>
-            <span class="work-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-
-        <li class="work-item reveal">
-          <a href="https://chappygo-os.github.io/Atomic-Spec/" target="_blank" rel="noopener noreferrer" aria-label="View Atomic Spec">
-            <span class="work-num">02</span>
-            <div class="work-meta">
-              <h3>Atomic Spec</h3>
-              <p>
-                Open-source governance layer for AI coding agents. 8 directives, 18 gates,
-                21 specialized subagents, designed to stop AIs from confidently shipping the
-                wrong code.
-              </p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>Open Source</span><span>Spec</span><span>Tooling</span>
-            </div>
-            <span class="work-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-
-        <li class="work-item reveal">
-          <a href="https://github.com/mohammad007kh/Multi-File-Ai-Chatbot" target="_blank" rel="noopener noreferrer" aria-label="View Multi-File AI Chatbot on GitHub">
-            <span class="work-num">03</span>
-            <div class="work-meta">
-              <h3>Multi-File AI Chatbot</h3>
-              <p>
-                Conversational interface for multi-document Q&amp;A. Upload PDFs, DOCX, and
-                images and chat with the content. Built on LangChain + Streamlit.
-              </p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>LangChain</span><span>RAG</span><span>Streamlit</span>
-            </div>
-            <span class="work-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-
-        <li class="work-item reveal">
-          <a href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
-            <span class="work-num">04</span>
-            <div class="work-meta">
-              <h3>Chest X-Ray Analysis</h3>
-              <p>
-                Transfer-learning research. Fine-tuned ResNet50 on chest X-ray data for
-                medical image classification.
-              </p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>PyTorch</span><span>ResNet50</span><span>ML</span>
-            </div>
-            <span class="work-arrow" aria-hidden="true">→</span>
+            <span class="work-arrow" aria-hidden="true">&rarr;</span>
           </a>
         </li>
 
         <li class="work-item reveal">
           <a href="https://github.com/lmstudio-ai/localization" target="_blank" rel="noopener noreferrer" aria-label="View LM Studio localization repo">
-            <span class="work-num">05</span>
+            <span class="work-num">04</span>
             <div class="work-meta">
-              <h3>LM Studio — Persian Localization</h3>
+              <h3>LM Studio &mdash; Persian Localization</h3>
               <p>
                 First Farsi translation for the popular local-LLM application. Open-source
                 contribution.
@@ -228,7 +244,7 @@
             <div class="work-tags" aria-hidden="true">
               <span>Open Source</span><span>i18n</span>
             </div>
-            <span class="work-arrow" aria-hidden="true">→</span>
+            <span class="work-arrow" aria-hidden="true">&rarr;</span>
           </a>
         </li>
       </ul>
@@ -297,6 +313,16 @@
           <span class="stack-tag">Persian (Native)</span>
         </dd>
       </dl>
+
+      <figure class="gh-activity reveal">
+        <figcaption class="gh-activity-label">Contribution activity</figcaption>
+        <img
+          src="https://ghchart.rshah.org/ff5e1a/mohammad007kh"
+          alt="GitHub contribution graph for mohammad007kh over the past year"
+          width="663" height="104"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+        <a class="gh-activity-link" href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer">github.com/mohammad007kh &nearr;</a>
+      </figure>
     </section>
 
     <section id="teaching" class="section">
@@ -337,42 +363,6 @@
         <span>Visit channel</span>
         <span class="cta-arrow" aria-hidden="true">↗</span>
       </a>
-
-      <h3 class="subsection-title">Certifications</h3>
-      <ul class="certs">
-        <li class="cert reveal">
-          <a href="https://coursera.org/share/c64dc9b8ea4bf1df6f00a6137e96af9d" target="_blank" rel="noopener noreferrer">
-            <span class="cert-title">Python for Data Science, AI &amp; Development</span>
-            <span class="cert-issuer">IBM · Coursera</span>
-            <span class="cert-year">2023</span>
-            <span class="cert-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li class="cert reveal">
-          <a href="https://www.coursera.org/account/accomplishments/certificate/D4UGBLS58DAP" target="_blank" rel="noopener noreferrer">
-            <span class="cert-title">Unsupervised Learning, Recommenders, Reinforcement Learning</span>
-            <span class="cert-issuer">Stanford · DeepLearning.AI</span>
-            <span class="cert-year">2023</span>
-            <span class="cert-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li class="cert reveal">
-          <a href="https://www.coursera.org/account/accomplishments/certificate/N5TH9CCPM57C" target="_blank" rel="noopener noreferrer">
-            <span class="cert-title">Advanced Learning Algorithms</span>
-            <span class="cert-issuer">Stanford · DeepLearning.AI</span>
-            <span class="cert-year">2023</span>
-            <span class="cert-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li class="cert reveal">
-          <a href="https://www.coursera.org/account/accomplishments/certificate/2PGXX9QZSVQQ" target="_blank" rel="noopener noreferrer">
-            <span class="cert-title">Supervised Machine Learning: Regression &amp; Classification</span>
-            <span class="cert-issuer">Stanford · DeepLearning.AI</span>
-            <span class="cert-year">2023</span>
-            <span class="cert-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-      </ul>
     </section>
 
     <section id="contact" class="section">
@@ -393,6 +383,44 @@
           <li><a href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer">YouTube</a></li>
         </ul>
       </div>
+    </section>
+
+    <section class="section section-quiet" id="credentials">
+        <h2 class="subsection-title">Certifications</h2>
+        <ul class="certs">
+          <li class="cert reveal">
+            <a href="https://coursera.org/share/c64dc9b8ea4bf1df6f00a6137e96af9d" target="_blank" rel="noopener noreferrer">
+              <span class="cert-title">Python for Data Science, AI &amp; Development</span>
+              <span class="cert-issuer">IBM · Coursera</span>
+              <span class="cert-year">2023</span>
+              <span class="cert-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="cert reveal">
+            <a href="https://www.coursera.org/account/accomplishments/certificate/D4UGBLS58DAP" target="_blank" rel="noopener noreferrer">
+              <span class="cert-title">Unsupervised Learning, Recommenders, Reinforcement Learning</span>
+              <span class="cert-issuer">Stanford · DeepLearning.AI</span>
+              <span class="cert-year">2023</span>
+              <span class="cert-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="cert reveal">
+            <a href="https://www.coursera.org/account/accomplishments/certificate/N5TH9CCPM57C" target="_blank" rel="noopener noreferrer">
+              <span class="cert-title">Advanced Learning Algorithms</span>
+              <span class="cert-issuer">Stanford · DeepLearning.AI</span>
+              <span class="cert-year">2023</span>
+              <span class="cert-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="cert reveal">
+            <a href="https://www.coursera.org/account/accomplishments/certificate/2PGXX9QZSVQQ" target="_blank" rel="noopener noreferrer">
+              <span class="cert-title">Supervised Machine Learning: Regression &amp; Classification</span>
+              <span class="cert-issuer">Stanford · DeepLearning.AI</span>
+              <span class="cert-year">2023</span>
+              <span class="cert-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
     </section>
   </main>
 

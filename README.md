@@ -20,7 +20,8 @@ npx serve .
 
 - `index.html` — single-page site
 - `styles.css` — all styles
-- `script.js` — all behavior (cursor glow, reveal-on-scroll, tagline rotator)
+- `script.js` — all behavior (theme toggle, cursor glow, reveal-on-scroll, tagline
+  rotator, contribution-graph fallback)
 - `404.html` — error page
 - `.nojekyll` — tells GitHub Pages to skip Jekyll
 - `google*.html` — Search Console verification

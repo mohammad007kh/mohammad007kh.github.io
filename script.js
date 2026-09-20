@@ -153,6 +153,18 @@
     }
   }
 
+  /* ---------- GitHub activity: drop the block if the service is unreachable ---------- */
+  const ghImg = document.querySelector('.gh-activity img');
+  if (ghImg) {
+    const hideGh = () => {
+      const fig = ghImg.closest('.gh-activity');
+      if (fig) fig.hidden = true;
+    };
+    ghImg.addEventListener('error', hideGh);
+    // covers the case where the image already failed before this script ran
+    if (ghImg.complete && ghImg.naturalWidth === 0) hideGh();
+  }
+
   /* ---------- Year ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
