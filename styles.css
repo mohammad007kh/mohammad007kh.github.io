@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------
-   Mohammad Khoddami — personal site
+   Mohammad Khoddami / personal site
    ---------------------------------------------------------- */
 
 :root {
@@ -606,7 +606,7 @@ main { display: block; }
   }
 }
 
-/* ---------- Work item — status badge ---------- */
+/* ---------- Work item: status badge ---------- */
 
 .work-title-row {
   display: flex;
@@ -979,7 +979,7 @@ button:focus-visible {
   }
 }
 
-/* status badge — quiet variant, for version tags */
+/* status badge: quiet variant, for version tags */
 
 .work-status--quiet {
   border-color: var(--border);
