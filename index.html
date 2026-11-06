@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohammad Khoddami | AI Engineer</title>
-  <meta name="description" content="Full-stack AI engineer building production-grade GenAI systems: RAG pipelines, multi-node agent architectures, and the governance layers that keep them honest." />
+  <meta name="description" content="Mohammad Khoddami is a forward-deployed AI engineer building production-grade generative AI systems: RAG pipelines, multi-node LangGraph agent architectures, and the governance layers that keep them honest." />
+  <meta name="author" content="Mohammad Khoddami" />
 
   <link rel="canonical" href="https://mohammad007kh.github.io/" />
 
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Mohammad Khoddami" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Mohammad Khoddami | AI Engineer" />
-  <meta property="og:description" content="Full-stack AI engineer. RAG pipelines, autonomous agents, and the governance layers that keep them honest." />
+  <meta property="og:description" content="Forward-deployed AI engineer. RAG pipelines, LangGraph agent architectures, and the governance layers that keep them honest." />
   <meta property="og:url" content="https://mohammad007kh.github.io/" />
   <meta property="og:image" content="https://mohammad007kh.github.io/og.png" />
   <meta property="og:image:width" content="1200" />
@@ -21,25 +22,41 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohammad Khoddami | AI Engineer" />
-  <meta name="twitter:description" content="Full-stack AI engineer. RAG pipelines, autonomous agents, and the governance layers that keep them honest." />
+  <meta name="twitter:description" content="Forward-deployed AI engineer. RAG pipelines, LangGraph agent architectures, and the governance layers that keep them honest." />
   <meta name="twitter:image" content="https://mohammad007kh.github.io/og.png" />
 
-  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#f5f1ea" media="(prefers-color-scheme: light)" />
+  <!-- rel="me" is bidirectionally verifiable; sameAs below is only an assertion. -->
+  <link rel="me" href="https://github.com/mohammad007kh" />
+  <link rel="me" href="https://www.linkedin.com/in/mohammadkhoddami/" />
+  <link rel="me" href="https://www.youtube.com/@CodeWithMamad" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='52' font-weight='500' text-anchor='middle' fill='%23fafafa'%3EM%3C/text%3E%3Ccircle cx='78' cy='78' r='6' fill='%23ff5e1a'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#0b0a09" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0a09'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='52' font-weight='500' text-anchor='middle' fill='%23f8f5f1'%3EM%3C/text%3E%3Ccircle cx='78' cy='78' r='6' fill='%23d9ab77'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Preloaded so the files are in flight before the stylesheet resolves, which
+       closes the swap window that was re-wrapping the display heading (CLS). If
+       Google bumps the font version these 404 harmlessly and the CSS still loads. -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/instrument-serif-latin.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/instrument-serif-latin-italic.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" />
+
+  <!-- Loaded non-blocking: the font stylesheet was costing ~1.8s of render-blocking
+       time. display=swap means text paints immediately in the fallback face. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" /></noscript>
 
   <script>
     (function () {
       try {
         var stored = localStorage.getItem('theme');
         var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-        var theme = stored || (prefersLight ? 'light' : 'dark');
-        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        if ((stored || (prefersLight ? 'light' : 'dark')) === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
       } catch (e) {}
     })();
   </script>
@@ -49,424 +66,216 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mohammad Khoddami",
-    "jobTitle": "AI Engineer",
-    "url": "https://mohammad007kh.github.io/",
-    "image": "https://mohammad007kh.github.io/og.png",
-    "description": "Full-stack AI engineer building production-grade generative AI systems: RAG pipelines, multi-node agent architectures, and the governance layers that keep them honest.",
-    "knowsAbout": [
-      "Retrieval-Augmented Generation",
-      "LLM agent architectures",
-      "LangGraph",
-      "Generative AI governance",
-      "Spec-driven development",
-      "LLM observability"
-    ],
-    "knowsLanguage": ["en", "fa"],
-    "sameAs": [
-      "https://github.com/mohammad007kh",
-      "https://www.linkedin.com/in/mohammadkhoddami/",
-      "https://www.youtube.com/@CodeWithMamad"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mohammad007kh.github.io/#person",
+        "name": "Mohammad Khoddami",
+        "jobTitle": "AI Engineer",
+        "url": "https://mohammad007kh.github.io/",
+        "image": "https://mohammad007kh.github.io/og.png",
+        "description": "Forward-deployed AI engineer building production-grade generative AI systems: RAG pipelines, multi-node LangGraph agent architectures, and the governance layers that keep them honest.",
+        "knowsAbout": [
+          "Retrieval-Augmented Generation",
+          "LLM agent architectures",
+          "LangGraph",
+          "Generative AI governance",
+          "Spec-driven development",
+          "LLM observability"
+        ],
+        "knowsLanguage": ["en", "fa"],
+        "sameAs": [
+          "https://github.com/mohammad007kh",
+          "https://www.linkedin.com/in/mohammadkhoddami/",
+          "https://www.youtube.com/@CodeWithMamad"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mohammad007kh.github.io/#website",
+        "url": "https://mohammad007kh.github.io/",
+        "name": "Mohammad Khoddami",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://mohammad007kh.github.io/#person" }
+      }
     ]
   }
   </script>
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+<div class="wrap lay">
 
-  <header class="site-header">
-    <a href="/" class="logo" aria-label="Home">MK<span class="logo-dot">.</span></a>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="#about"><span class="nav-num">01</span>About</a></li>
-        <li><a href="#work"><span class="nav-num">02</span>Work</a></li>
-        <li><a href="#stack"><span class="nav-num">03</span>Stack</a></li>
-        <li><a href="#teaching"><span class="nav-num">04</span>Teaching</a></li>
-        <li><a href="#contact"><span class="nav-num">05</span>Contact</a></li>
-      </ul>
+  <aside class="rail">
+    <div>
+      <h1 class="name">Mohammad<br>Khoddami</h1>
+      <span class="role">AI Engineer</span>
+      <p class="railbio">I build production-grade generative AI systems, and the governance layers that keep them honest.</p>
+      <nav class="railnav" aria-label="Primary">
+        <a href="#approach"><i aria-hidden="true"></i>Approach</a>
+        <a href="#work"><i aria-hidden="true"></i>Work</a>
+        <a href="#stack"><i aria-hidden="true"></i>Stack</a>
+        <a href="#teaching"><i aria-hidden="true"></i>Teaching</a>
+        <a href="#contact"><i aria-hidden="true"></i>Contact</a>
+      </nav>
+    </div>
+
+    <div class="railfoot">
+      <div class="social">
+        <a href="https://github.com/mohammad007kh" target="_blank" rel="me noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mohammadkhoddami/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+        <a href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="me noopener noreferrer">YouTube</a>
+      </div>
       <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
-        <svg class="theme-icon theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="theme-icon theme-icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4"></circle>
-          <line x1="12" y1="2" x2="12" y2="4"></line>
-          <line x1="12" y1="20" x2="12" y2="22"></line>
-          <line x1="2" y1="12" x2="4" y2="12"></line>
-          <line x1="20" y1="12" x2="22" y2="12"></line>
-          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
-          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
-          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
-          <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          <line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line>
+          <line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line>
+          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
         </svg>
-        <svg class="theme-icon theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="theme-icon theme-icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </button>
-    </nav>
-  </header>
+    </div>
+  </aside>
 
-  <main>
-    <section class="hero" id="hero">
-      <h1 class="hero-title reveal">
-        I build<br>
-        <span class="rotator" data-words="AI systems,LLM apps,ML pipelines,RAG systems,AI agents,guardrails" aria-live="polite" aria-atomic="true">
-          <span class="rotator-text">AI systems</span><span class="caret" aria-hidden="true">_</span>
-        </span>
-      </h1>
-      <p class="lede reveal">
-        Full-stack AI engineer building production-grade GenAI systems,
-        and the governance layers that keep them honest.
-      </p>
-      <p class="lede-sub reveal">
-        Forward-deployed: I sit between what clients need and what gets shipped.
-        Spec to production, no layer in between.
-      </p>
-      <div class="hero-ctas reveal">
-        <a href="#work" class="cta">
-          <span>Selected work</span>
-          <span class="cta-arrow" aria-hidden="true">→</span>
+  <main class="col">
+
+    <section id="approach">
+      <span class="lbl">Approach</span>
+      <h2 class="stmt">I sit between what clients need and what actually <em>ships</em>.</h2>
+      <p class="body">Forward-deployed. I work directly with the client, turn their requests into specs, build them, and come back for review with the people who actually use the thing. No PM layer in between. The feedback loop is hours, not sprints.</p>
+      <p class="body">The most dangerous thing about AI coding is not that it fails, it is that it succeeds confidently in the wrong direction. So I build the guardrails, not just the features.</p>
+      <div class="pull rv">
+        <p>Citation accuracy fell from 96% to 82% after a release. Fixed-token chunking was splitting clauses mid-sentence.</p>
+        <span>Structure-aware chunking plus a confidence threshold put it back at 96%.</span>
+      </div>
+    </section>
+
+    <section id="work">
+      <span class="lbl rv">Selected work</span>
+      <h2 class="stmt rv">Systems in production, and the <em>specs</em> behind them.</h2>
+      <div class="idx">
+
+        <div class="item item-static rv">
+          <span class="num">01</span>
+          <span class="imeta">
+            <span class="ttl">AI content &amp; document platforms</span>
+            <span class="dsc">Two multi-tenant SaaS products serving real users. One runs multi-mode AI content generation with credit metering and a multi-language UI. The other does RAG-grounded document drafting with per-clause source citation, structure-aware chunking, and confidence scoring.</span>
+            <span class="role-tag">Lead engineer &middot; Client names withheld under NDA</span>
+          </span>
+          <span class="stat"><b>Live</b>Next.js<br>FastAPI<br>Gemini</span>
+        </div>
+
+        <a class="item rv" href="https://chappygo-os.github.io/Atomic-Spec/" target="_blank" rel="noopener noreferrer">
+          <span class="num">02</span>
+          <span class="imeta">
+            <span class="ttl">Atomic Spec</span>
+            <span class="dsc">A governance layer for AI coding agents. Nine prime directives and gated checkpoints stop an agent from confidently shipping the wrong code. v0.5.0 derives a per-layer test strategy from one up-front question, routes it through 12 testing subagents, and will not schedule a test task until a human approves the strategy.</span>
+            <span class="role-tag">Creator &middot; Validated end-to-end on 5 agents: Claude Code, Cursor, GitHub Copilot, Gemini CLI, Windsurf. 12 more experimental, 17 total.</span>
+          </span>
+          <span class="stat"><b>v0.5.0</b>Open source</span>
         </a>
-        <a href="#contact" class="cta cta-ghost">
-          <span>Get in touch</span>
+
+        <a class="item rv" href="https://github.com/mohammad007kh/Internal-Knowledge-AI-Agent/" target="_blank" rel="noopener noreferrer">
+          <span class="num">03</span>
+          <span class="imeta">
+            <span class="ttl">Internal Knowledge AI Agent</span>
+            <span class="dsc">Enterprise knowledge retrieval. A 10-node LangGraph pipeline with intent clarification, self-critique, and full observability.</span>
+            <span class="role-tag">Creator &middot; FastAPI, Postgres + pgvector, Celery</span>
+          </span>
+          <span class="stat"><b>Building</b>LangGraph</span>
         </a>
+
+        <a class="item rv" href="https://github.com/lmstudio-ai/localization" target="_blank" rel="noopener noreferrer">
+          <span class="num">04</span>
+          <span class="imeta">
+            <span class="ttl">LM Studio: Persian localization</span>
+            <span class="dsc">First Farsi translation for the local-LLM application, merged upstream.</span>
+            <span class="role-tag">Contributor &middot; Open source</span>
+          </span>
+          <span class="stat"><b>Merged</b>i18n</span>
+        </a>
+
       </div>
     </section>
 
-    <section id="about" class="section">
-      <header class="section-header">
-        <span class="section-num reveal">01 / About</span>
-        <h2 class="section-title reveal">Why companies hire me.</h2>
-      </header>
-
-      <div class="principles">
-        <article class="principle reveal">
-          <p class="principle-label">On governance</p>
-          <p>
-            The most dangerous thing about AI coding isn't that it fails, it's that it succeeds
-            confidently in the wrong direction. That's why I built Atomic Spec: to make AI
-            development predictable, auditable, and safe.
-          </p>
-        </article>
-        <article class="principle reveal">
-          <p class="principle-label">On leverage</p>
-          <p>
-            Using AI to build software isn't cheating, it's leverage. The value isn't in
-            memorizing syntax. It's in knowing <em>what</em> to build, <em>how</em> to architect
-            it, and <em>when</em> the AI is wrong. That's engineering.
-          </p>
-        </article>
-        <article class="principle reveal">
-          <p class="principle-label">On shipping</p>
-          <p>
-            Demos are easy. Production is a different sport, auth, rate limits, eval harnesses,
-            rollback paths, the 3 a.m. page. I build for the sport, not the demo.
-          </p>
-        </article>
-      </div>
-
-      <aside class="callout reveal">
-        <p class="callout-label">Reliability, concretely</p>
-        <p>
-          Citation accuracy on the document platform fell from 96% to 82% after a release.
-          Root cause: fixed-token chunking was splitting clauses mid-sentence, so the retrieved
-          span no longer matched the clause it cited. Structure-aware chunking plus a confidence
-          threshold put it back at 96%.
-        </p>
-      </aside>
-
-      <div class="section-body reveal">
-        <p>
-          I'm a full-stack AI engineer specializing in production-grade Generative AI applications.
-          I design RAG pipelines, multi-node agent architectures, and observability systems using
-          LangChain, LangGraph, FastAPI, and modern cloud infrastructure.
-        </p>
-        <p>
-          AI-assisted development is the future, but only when it's governed, structured, and
-          predictable. That's why I build the guardrails, not just the features.
-        </p>
-        <p>
-          I work forward-deployed. I sit with the client, turn their requests into specs, build
-          them, and come back for review with the people who actually use the thing. No PM
-          layer in between. The feedback loop is hours, not sprints.
-        </p>
-      </div>
-    </section>
-
-    <section id="work" class="section">
-      <header class="section-header">
-        <span class="section-num reveal">02 / Selected work</span>
-        <h2 class="section-title reveal">Things I've built.</h2>
-      </header>
-
-      <ul class="work-list">
-        <li class="work-item reveal">
-          <div class="work-static">
-            <span class="work-num">01</span>
-            <div class="work-meta">
-              <div class="work-title-row">
-                <h3>AI content &amp; document generation platforms</h3>
-                <span class="work-status">Live &middot; production</span>
-              </div>
-              <p>
-                Two multi-tenant SaaS products serving real users today. One runs multi-mode AI
-                content generation with credit metering and a multi-language UI. The other does
-                RAG-grounded document drafting with per-clause source citation, structure-aware
-                chunking, and confidence scoring.
-              </p>
-              <p class="work-note">Client work. Product names withheld.</p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>Next.js</span><span>FastAPI</span><span>Gemini</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="work-item reveal">
-          <a href="https://chappygo-os.github.io/Atomic-Spec/" target="_blank" rel="noopener noreferrer" aria-label="View Atomic Spec">
-            <span class="work-num">02</span>
-            <div class="work-meta">
-              <div class="work-title-row">
-                <h3>Atomic Spec</h3>
-                <span class="work-status work-status--quiet">v0.5.0</span>
-              </div>
-              <p>
-                Open-source governance layer for AI coding agents. Nine Prime Directives and gated
-                checkpoints stop an agent from confidently shipping the wrong code. v0.5.0 derives a
-                per-layer test strategy from one up-front yes/no question, routes it through 12
-                testing subagents, and won&rsquo;t schedule a single test task until a human approves
-                the strategy.
-              </p>
-              <p class="work-note">
-                Validated end-to-end on 5 agents: Claude Code, Cursor, GitHub Copilot,
-                Gemini CLI, Windsurf. 12 more experimental, 17 total.
-              </p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>Open Source</span><span>Governance</span><span>Testing</span>
-            </div>
-            <span class="work-arrow" aria-hidden="true">&rarr;</span>
-          </a>
-        </li>
-
-        <li class="work-item reveal">
-          <a href="https://github.com/mohammad007kh/Internal-Knowledge-AI-Agent/" target="_blank" rel="noopener noreferrer" aria-label="View Internal Knowledge AI Agent on GitHub">
-            <span class="work-num">03</span>
-            <div class="work-meta">
-              <div class="work-title-row">
-                <h3>Internal Knowledge AI Agent</h3>
-                <span class="work-status">In development</span>
-              </div>
-              <p>
-                Enterprise knowledge retrieval. A 10-node LangGraph pipeline with intent
-                clarification, self-critique, and full observability, on FastAPI, Postgres + pgvector,
-                and Celery.
-              </p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>LangGraph</span><span>RAG</span><span>FastAPI</span>
-            </div>
-            <span class="work-arrow" aria-hidden="true">&rarr;</span>
-          </a>
-        </li>
-
-        <li class="work-item reveal">
-          <a href="https://github.com/lmstudio-ai/localization" target="_blank" rel="noopener noreferrer" aria-label="View LM Studio localization repo">
-            <span class="work-num">04</span>
-            <div class="work-meta">
-              <h3>LM Studio: Persian Localization</h3>
-              <p>
-                First Farsi translation for the popular local-LLM application. Open-source
-                contribution.
-              </p>
-            </div>
-            <div class="work-tags" aria-hidden="true">
-              <span>Open Source</span><span>i18n</span>
-            </div>
-            <span class="work-arrow" aria-hidden="true">&rarr;</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="stack" class="section">
-      <header class="section-header">
-        <span class="section-num reveal">03 / Stack</span>
-        <h2 class="section-title reveal">Tools I reach for.</h2>
-      </header>
-
-      <dl class="stack reveal">
-        <dt class="stack-category">AI / LLM</dt>
-        <dd class="stack-tags stack-tags-marquee">
-          <div class="marquee-track">
-            <span class="stack-tag">LangGraph</span>
-            <span class="stack-tag">LangChain</span>
-            <span class="stack-tag">RAG</span>
-            <span class="stack-tag">AI Agents</span>
-            <span class="stack-tag">Prompt Eng.</span>
-            <span class="stack-tag">pgvector</span>
-            <span class="stack-tag">FAISS</span>
-            <span class="stack-tag">PyTorch</span>
-            <span class="stack-tag">TensorFlow</span>
-            <span class="stack-tag">Langfuse</span>
-            <span class="stack-tag">OpenAI</span>
-            <span class="stack-tag">Hugging Face</span>
-          </div>
-        </dd>
-
-        <dt class="stack-category">Backend</dt>
-        <dd class="stack-tags">
-          <span class="stack-tag">Python 3.12</span>
-          <span class="stack-tag">FastAPI</span>
-          <span class="stack-tag">Node.js</span>
-          <span class="stack-tag">ASP.NET Core</span>
-          <span class="stack-tag">PostgreSQL</span>
-          <span class="stack-tag">MongoDB</span>
-          <span class="stack-tag">Redis</span>
-          <span class="stack-tag">Celery</span>
-          <span class="stack-tag">SQLAlchemy</span>
-          <span class="stack-tag">Alembic</span>
-        </dd>
-
-        <dt class="stack-category">Frontend</dt>
-        <dd class="stack-tags">
-          <span class="stack-tag">Next.js 15</span>
-          <span class="stack-tag">React</span>
-          <span class="stack-tag">Tailwind</span>
-          <span class="stack-tag">shadcn/ui</span>
-          <span class="stack-tag">Streamlit</span>
-        </dd>
-
-        <dt class="stack-category">Infra</dt>
-        <dd class="stack-tags">
-          <span class="stack-tag">Docker</span>
-          <span class="stack-tag">Docker Compose</span>
-          <span class="stack-tag">Git</span>
-          <span class="stack-tag">CI/CD</span>
-          <span class="stack-tag">MinIO</span>
-        </dd>
-
-        <dt class="stack-category">Languages</dt>
-        <dd class="stack-tags">
-          <span class="stack-tag">English</span>
-          <span class="stack-tag">Persian (Native)</span>
-        </dd>
+    <section id="stack">
+      <h2 class="lbl rv">Stack</h2>
+      <dl class="kv rv">
+        <dt>AI / LLM</dt><dd>LangGraph, LangChain, RAG, pgvector, FAISS, Langfuse, PyTorch, TensorFlow, OpenAI, Hugging Face</dd>
+        <dt>Backend</dt><dd>Python 3.12, FastAPI, Node.js, ASP.NET Core, PostgreSQL, MongoDB, Redis, Celery, SQLAlchemy, Alembic</dd>
+        <dt>Frontend</dt><dd>Next.js 15, React, Tailwind CSS, shadcn/ui, Streamlit</dd>
+        <dt>Infra</dt><dd>Docker, Docker Compose, Git, CI/CD, MinIO</dd>
+        <dt>Languages</dt><dd>English (bilingual proficiency), Persian (native)</dd>
       </dl>
 
-      <figure class="gh-activity reveal">
-        <figcaption class="gh-activity-label">Contribution activity</figcaption>
+      <figure class="gh rv">
+        <figcaption>Contribution activity</figcaption>
         <img
-          src="https://ghchart.rshah.org/ff5e1a/mohammad007kh"
+          src="https://ghchart.rshah.org/d9ab77/mohammad007kh"
           alt="GitHub contribution graph for mohammad007kh over the past year"
-          width="663" height="104"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-        <a class="gh-activity-link" href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer">github.com/mohammad007kh &nearr;</a>
+          width="663" height="104" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+        <a href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer">github.com/mohammad007kh &nearr;</a>
       </figure>
     </section>
 
-    <section id="teaching" class="section">
-      <header class="section-header">
-        <span class="section-num reveal">04 / Teaching</span>
-        <h2 class="section-title reveal">@CodeWithMamad.</h2>
-      </header>
-
-      <div class="section-body reveal">
-        <p>
-          Seven-plus years and +70 videos of free tutorials and courses on YouTube, web
-          development, AI, and software-engineering fundamentals.
-        </p>
+    <section id="teaching">
+      <span class="lbl rv">Teaching</span>
+      <h2 class="stmt rv">Seven years of explaining this stuff <em>out loud</em>.</h2>
+      <p class="body rv">70+ free tutorials on @CodeWithMamad covering web development, AI, and software-engineering fundamentals. Teaching a thing is how I find out whether I actually understand it.</p>
+      <div class="yt rv">
+        <div><iframe loading="lazy"
+          src="https://www.youtube-nocookie.com/embed/videoseries?list=PLHSUcJ83dbdF3KwMFgY0b7cEzryXukzhL"
+          title="@CodeWithMamad: course playlist 01" referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></div>
+        <div><iframe loading="lazy"
+          src="https://www.youtube-nocookie.com/embed/videoseries?list=PLHSUcJ83dbdE_vTqh5ZweZaE-iC-a8flp"
+          title="@CodeWithMamad: course playlist 02" referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></div>
       </div>
-
-      <div class="yt-grid reveal">
-        <div class="yt-embed">
-          <iframe
-            loading="lazy"
-            src="https://www.youtube.com/embed/videoseries?si=DRBD6jmTAbZudeJb&amp;list=PLHSUcJ83dbdF3KwMFgY0b7cEzryXukzhL"
-            title="@CodeWithMamad: Course playlist 01"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-        <div class="yt-embed">
-          <iframe
-            loading="lazy"
-            src="https://www.youtube.com/embed/videoseries?si=7znmv0uWjKOhiTTq&amp;list=PLHSUcJ83dbdE_vTqh5ZweZaE-iC-a8flp"
-            title="@CodeWithMamad: Course playlist 02"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <a href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer" class="cta">
-        <span>Visit channel</span>
-        <span class="cta-arrow" aria-hidden="true">↗</span>
-      </a>
+      <a class="chan rv" href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer">Visit the channel &nearr;</a>
     </section>
 
-    <section id="contact" class="section">
-      <header class="section-header">
-        <span class="section-num reveal">05 / Contact</span>
-        <h2 class="section-title reveal">Let's talk.</h2>
-      </header>
-      <div class="section-body reveal">
-        <p>
-          If you're working on something interesting in Generative AI, agent architectures,
-          or AI governance, let's connect on LinkedIn.
-        </p>
-        <a href="https://www.linkedin.com/in/mohammadkhoddami/" target="_blank" rel="noopener noreferrer" class="big-link">
-          linkedin.com/in/mohammadkhoddami<span class="big-link-arrow" aria-hidden="true">↗</span>
+    <section id="certs">
+      <h2 class="lbl rv">Certifications</h2>
+      <div class="certs rv">
+        <a class="cert" href="https://coursera.org/share/c64dc9b8ea4bf1df6f00a6137e96af9d" target="_blank" rel="noopener noreferrer">
+          <span class="ct">Python for Data Science, AI &amp; Development</span>
+          <span class="ci">IBM &middot; Coursera</span><span class="cy">2023</span>
         </a>
-        <ul class="socials">
-          <li><a href="https://github.com/mohammad007kh" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://www.youtube.com/@CodeWithMamad" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-        </ul>
+        <a class="cert" href="https://www.coursera.org/account/accomplishments/certificate/D4UGBLS58DAP" target="_blank" rel="noopener noreferrer">
+          <span class="ct">Unsupervised Learning, Recommenders, Reinforcement Learning</span>
+          <span class="ci">Stanford &middot; DeepLearning.AI</span><span class="cy">2023</span>
+        </a>
+        <a class="cert" href="https://www.coursera.org/account/accomplishments/certificate/N5TH9CCPM57C" target="_blank" rel="noopener noreferrer">
+          <span class="ct">Advanced Learning Algorithms</span>
+          <span class="ci">Stanford &middot; DeepLearning.AI</span><span class="cy">2023</span>
+        </a>
+        <a class="cert" href="https://www.coursera.org/account/accomplishments/certificate/2PGXX9QZSVQQ" target="_blank" rel="noopener noreferrer">
+          <span class="ct">Supervised Machine Learning: Regression &amp; Classification</span>
+          <span class="ci">Stanford &middot; DeepLearning.AI</span><span class="cy">2023</span>
+        </a>
       </div>
     </section>
 
-    <section class="section section-quiet" id="credentials">
-        <h2 class="subsection-title">Certifications</h2>
-        <ul class="certs">
-          <li class="cert reveal">
-            <a href="https://coursera.org/share/c64dc9b8ea4bf1df6f00a6137e96af9d" target="_blank" rel="noopener noreferrer">
-              <span class="cert-title">Python for Data Science, AI &amp; Development</span>
-              <span class="cert-issuer">IBM · Coursera</span>
-              <span class="cert-year">2023</span>
-              <span class="cert-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-          <li class="cert reveal">
-            <a href="https://www.coursera.org/account/accomplishments/certificate/D4UGBLS58DAP" target="_blank" rel="noopener noreferrer">
-              <span class="cert-title">Unsupervised Learning, Recommenders, Reinforcement Learning</span>
-              <span class="cert-issuer">Stanford · DeepLearning.AI</span>
-              <span class="cert-year">2023</span>
-              <span class="cert-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-          <li class="cert reveal">
-            <a href="https://www.coursera.org/account/accomplishments/certificate/N5TH9CCPM57C" target="_blank" rel="noopener noreferrer">
-              <span class="cert-title">Advanced Learning Algorithms</span>
-              <span class="cert-issuer">Stanford · DeepLearning.AI</span>
-              <span class="cert-year">2023</span>
-              <span class="cert-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-          <li class="cert reveal">
-            <a href="https://www.coursera.org/account/accomplishments/certificate/2PGXX9QZSVQQ" target="_blank" rel="noopener noreferrer">
-              <span class="cert-title">Supervised Machine Learning: Regression &amp; Classification</span>
-              <span class="cert-issuer">Stanford · DeepLearning.AI</span>
-              <span class="cert-year">2023</span>
-              <span class="cert-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-        </ul>
+    <section id="contact">
+      <span class="lbl rv">Contact</span>
+      <h2 class="stmt rv">Building something that has to survive <em>production</em>?</h2>
+      <a class="huge rv" href="https://www.linkedin.com/in/mohammadkhoddami/" target="_blank" rel="me noopener noreferrer">linkedin.com/in/<wbr>mohammadkhoddami</a>
     </section>
+
+    <footer>
+      <span>&copy; <span id="year">2026</span> Mohammad Khoddami</span>
+      <span>Hand-built. No framework.</span>
+    </footer>
+
   </main>
+</div>
 
-  <footer class="site-footer">
-    <p>© <span id="year">2026</span> Mohammad Khoddami</p>
-    <p class="muted">Hand-built. No framework.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

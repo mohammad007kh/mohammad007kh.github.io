@@ -1,171 +1,59 @@
 (function () {
   'use strict';
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Theme toggle ---------- */
-  const themeToggle = document.querySelector('.theme-toggle');
-  if (themeToggle) {
-    function getCurrentTheme() {
+  var toggle = document.querySelector('.theme-toggle');
+  if (toggle) {
+    function current() {
       return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
     }
-    function applyTheme(theme) {
+    function apply(theme) {
       if (theme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
       } else {
         document.documentElement.removeAttribute('data-theme');
       }
-      themeToggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+      toggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
     }
-    // initialize aria-pressed to match the inline-script's choice
-    themeToggle.setAttribute('aria-pressed', getCurrentTheme() === 'light' ? 'true' : 'false');
-
-    themeToggle.addEventListener('click', () => {
-      const next = getCurrentTheme() === 'light' ? 'dark' : 'light';
-      applyTheme(next);
+    toggle.setAttribute('aria-pressed', current() === 'light' ? 'true' : 'false');
+    toggle.addEventListener('click', function () {
+      var next = current() === 'light' ? 'dark' : 'light';
+      apply(next);
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
   }
 
-  /* ---------- Cursor glow ---------- */
-  const glow = document.querySelector('.cursor-glow');
-  if (glow && !prefersReducedMotion && window.matchMedia('(hover: hover)').matches) {
-    let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
-    let initialized = false, rafScheduled = false;
-
-    function render() {
-      currentX += (targetX - currentX) * 0.18;
-      currentY += (targetY - currentY) * 0.18;
-      glow.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-      const dx = Math.abs(targetX - currentX);
-      const dy = Math.abs(targetY - currentY);
-      if (dx > 0.5 || dy > 0.5) {
-        rafScheduled = true;
-        requestAnimationFrame(render);
-      } else {
-        rafScheduled = false;
-      }
-    }
-
-    document.addEventListener('mousemove', (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
-      if (!initialized) {
-        currentX = targetX;
-        currentY = targetY;
-        glow.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-        glow.classList.add('active');
-        initialized = true;
-      }
-      if (!rafScheduled) {
-        rafScheduled = true;
-        requestAnimationFrame(render);
-      }
-    }, { passive: true });
-
-    document.addEventListener('mouseleave', () => glow.classList.remove('active'));
-    document.addEventListener('mouseenter', () => { if (initialized) glow.classList.add('active'); });
-  }
-
-  /* ---------- Sticky header state ---------- */
-  const header = document.querySelector('.site-header');
-  if (header) {
-    let scrolled = false;
-    function onScroll() {
-      const next = window.scrollY > 12;
-      if (next !== scrolled) {
-        scrolled = next;
-        header.classList.toggle('scrolled', scrolled);
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+  /* ---------- Contribution graph: drop the block if the service is unreachable ---------- */
+  var gh = document.querySelector('.gh img');
+  if (gh) {
+    var hideGh = function () {
+      var fig = gh.closest('.gh');
+      if (fig) fig.hidden = true;
+    };
+    gh.addEventListener('error', hideGh);
+    // covers the case where the image already failed before this script ran
+    if (gh.complete && gh.naturalWidth === 0) hideGh();
   }
 
   /* ---------- Reveal on scroll ---------- */
-  const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          // tiny stagger so items in the same section feel orchestrated
-          setTimeout(() => e.target.classList.add('visible'), i * 60);
-          io.unobserve(e.target);
+  var reveals = document.querySelectorAll('.rv');
+  if (!reduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function () { entry.target.classList.add('in'); }, i * 90);
+          io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    reveals.forEach((el) => io.observe(el));
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
   } else {
-    reveals.forEach((el) => el.classList.add('visible'));
-  }
-
-  /* ---------- Marquee: duplicate AI/LLM stack track for seamless loop ---------- */
-  const marqueeTrack = document.querySelector('.stack-tags-marquee .marquee-track');
-  if (marqueeTrack && !prefersReducedMotion) {
-    const originals = Array.from(marqueeTrack.children);
-    originals.forEach((el) => {
-      const clone = el.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      marqueeTrack.appendChild(clone);
-    });
-  }
-
-  /* ---------- Tagline rotator (typewriter) ---------- */
-  const rotatorEl = document.querySelector('.rotator');
-  const rotatorText = document.querySelector('.rotator-text');
-  if (rotatorEl && rotatorText && !prefersReducedMotion) {
-    const words = (rotatorEl.dataset.words || '')
-      .split(',')
-      .map((s) => s.trim())
-      .filter(Boolean);
-
-    if (words.length > 1) {
-      let i = 0;
-      let charIndex = words[0].length;
-      let deleting = false;
-
-      function tick() {
-        const word = words[i];
-        if (deleting) {
-          charIndex--;
-          rotatorText.textContent = word.slice(0, charIndex);
-          if (charIndex === 0) {
-            deleting = false;
-            i = (i + 1) % words.length;
-            setTimeout(tick, 220);
-            return;
-          }
-          setTimeout(tick, 38);
-        } else {
-          charIndex++;
-          rotatorText.textContent = words[i].slice(0, charIndex);
-          if (charIndex === words[i].length) {
-            deleting = true;
-            setTimeout(tick, 2200);
-            return;
-          }
-          setTimeout(tick, 70 + Math.random() * 60);
-        }
-      }
-
-      setTimeout(() => { deleting = true; tick(); }, 2400);
-    }
-  }
-
-  /* ---------- GitHub activity: drop the block if the service is unreachable ---------- */
-  const ghImg = document.querySelector('.gh-activity img');
-  if (ghImg) {
-    const hideGh = () => {
-      const fig = ghImg.closest('.gh-activity');
-      if (fig) fig.hidden = true;
-    };
-    ghImg.addEventListener('error', hideGh);
-    // covers the case where the image already failed before this script ran
-    if (ghImg.complete && ghImg.naturalWidth === 0) hideGh();
+    reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
   /* ---------- Year ---------- */
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 })();
