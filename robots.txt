@@ -1,0 +1,23 @@
+# https://mohammad007kh.github.io/
+# Everything here is public. Crawl it.
+
+User-agent: *
+Allow: /
+
+# Named explicitly so AI crawlers have no ambiguity about consent.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mohammad007kh.github.io/sitemap.xml

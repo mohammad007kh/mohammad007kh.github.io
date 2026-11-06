@@ -1,0 +1,56 @@
+# Mohammad Khoddami
+
+> Full-stack AI engineer building production-grade generative AI systems: RAG
+> pipelines, multi-node LangGraph agent architectures, and the governance layers
+> that keep them honest. Works forward-deployed, directly with clients, from spec
+> to production.
+
+Based in Iran. Languages: English (bilingual proficiency), Persian (native).
+
+## Site
+
+- [Portfolio](https://mohammad007kh.github.io/): Single-page portfolio covering
+  positioning, selected work, technical stack, teaching, and credentials.
+
+## Selected work
+
+- [Atomic Spec](https://chappygo-os.github.io/Atomic-Spec/): Open-source
+  governance layer for AI coding agents. Nine Prime Directives and gated
+  checkpoints that stop an agent from confidently shipping the wrong code.
+  v0.5.0 derives a per-layer test strategy from one up-front question, routes it
+  through 12 testing subagents, and requires human approval before scheduling
+  test tasks. Validated end-to-end on 5 agents (Claude Code, Cursor, GitHub
+  Copilot, Gemini CLI, Windsurf); 12 more experimental, 17 total.
+- [Internal Knowledge AI Agent](https://github.com/mohammad007kh/Internal-Knowledge-AI-Agent/):
+  Enterprise knowledge retrieval. A 10-node LangGraph pipeline with intent
+  clarification, self-critique, and full observability, on FastAPI, PostgreSQL +
+  pgvector, and Celery. In development.
+- AI content and document generation platforms: Two multi-tenant SaaS products in
+  production. One runs multi-mode AI content generation with credit metering and
+  a multi-language UI. The other does RAG-grounded document drafting with
+  per-clause source citation, structure-aware chunking, and confidence scoring.
+  Client work; product names withheld.
+- [LM Studio Persian localization](https://github.com/lmstudio-ai/localization):
+  First Farsi translation for the local-LLM application. Open-source
+  contribution.
+
+## Stack
+
+AI/LLM: LangGraph, LangChain, RAG, AI agents, prompt engineering, pgvector,
+FAISS, PyTorch, TensorFlow, Langfuse, OpenAI, Hugging Face.
+Backend: Python 3.12, FastAPI, Node.js, ASP.NET Core, PostgreSQL, MongoDB, Redis,
+Celery, SQLAlchemy, Alembic.
+Frontend: Next.js 15, React, Tailwind CSS, shadcn/ui, Streamlit.
+Infrastructure: Docker, Docker Compose, Git, CI/CD, MinIO.
+
+## Teaching
+
+- [@CodeWithMamad on YouTube](https://www.youtube.com/@CodeWithMamad): Seven-plus
+  years and 70+ videos of free tutorials on web development, AI, and
+  software-engineering fundamentals.
+
+## Profiles
+
+- [GitHub](https://github.com/mohammad007kh)
+- [LinkedIn](https://www.linkedin.com/in/mohammadkhoddami/)
+- [YouTube](https://www.youtube.com/@CodeWithMamad)
